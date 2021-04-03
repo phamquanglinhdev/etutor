@@ -41,4 +41,4 @@ Route::get('/preview/{url}',[\App\Http\Controllers\PreviewCourseController::clas
     ['url']
 )->name('preview');
 Route::post('/',[\App\Http\Controllers\SaveCustomerController::class,'save'])->name('save.customer');
-
+Route::post('/teacher/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'save'])->name('save.comment');

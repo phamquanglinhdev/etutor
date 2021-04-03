@@ -42,6 +42,7 @@
                     <div class="bg-light p-5">
                         <div class="text-dark h5">Đánh giá trung bình</div>
                         <div class="h1">5 <i class=" text-warning fas fa-star text-warning mr-2"></i></div>
+                        <div>13 đánh giá</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
@@ -74,11 +75,25 @@
             </div>
         </div>
         <div class="container">
-            <div class="p-5">
+            <div class="media p-5">
+                <img class="mr-3 " style="max-width: 80px ;height: auto" src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-gai-xinh-de-thuong-cap-3-580x580.jpg" alt="Generic placeholder image">
+                <div class="media-body">
+                    <h5 class="mt-0">Trần Thị Linh</h5>
+                    <h5>@for($i=1;$i<=5;$i++)
+                        <i class="fas fa-star text-warning"></i>
+                        @endfor</h5>
+                    Khóa học rất hay và bỗ ích, cảm ơn cô rất nhiều !!
+                </div>
+            </div>
+        </div>
+        <div class="container">
+            <div class="">
+                @if(backpack_auth()->check())
                 <div class="h3">Đánh giá của bạn</div>
-                <form class="rate">
+                <form class="rating bg-light" action="{{route('save.comment',['id'=>$teacher->id])}}" method="post">
                     @csrf
                     <input type="hidden" value="{{$teacher->id}}" name="teacher_id">
+                    <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
                     <input type="radio" id="star5" name="rate" value="5" />
                     <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
                     <input type="radio" id="star4" name="rate" value="4" />
@@ -96,6 +111,7 @@
                         <button  class="btn btn-origin pointed" type="submit">Gửi</button>
                     </div>
                 </form>
+                @endif
             </div>
         </div>
     @else
