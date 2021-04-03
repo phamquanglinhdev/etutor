@@ -88,9 +88,9 @@
                             Giáo viên
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Giáo viên Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Giáo viên Philipines</a></li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>3])}}">Giáo viên bản ngữ</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>0])}}">Giáo viên Việt Nam</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Giáo viên Philipines</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Giáo viên bản ngữ</a></li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">

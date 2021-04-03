@@ -139,7 +139,7 @@
                         <a href="{{route('teachers',['type'=>0])}}"
                            class="link-style-none text-white">
                             <img src="{{asset('uploads/teacher-vn.png')}}" class="pb-2 w-100">
-                            <p class="h4 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
                             <p>Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh tại Mỹ - Châu Âu.</p>
                         </a>
                     </div>
@@ -150,7 +150,7 @@
                         <a href="{{route('teachers',['type'=>1])}}"
                            class="link-style-none text-white">
                             <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">
-                            <p class="h4 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
                             <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên toàn thế giới.</p>
                         </a>
                     </div>
@@ -161,7 +161,7 @@
                         <a href="{{route('teachers',['type'=>2])}}"
                            class="link-style-none text-white">
                             <img src="{{asset('uploads/teacher-bn.png')}}" class="pb-2 w-100">
-                            <p class="h4 text-uppercase text-origin"><b>Giáo viên Bản Ngữ</b></p>
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Bản Ngữ</b></p>
                             <p>Giáo viên Mỹ - Châu Âu – Úc – Nam Phi là những nước tiếng Anh là ngôn ngữ chính.</p>
                         </a>
                     </div>
