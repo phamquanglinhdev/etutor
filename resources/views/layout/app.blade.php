@@ -85,7 +85,18 @@
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Góc chia sẻ
+                            Giáo viên
+                        </a>
+                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Học nói</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Học viết</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>3])}}">Học nghe</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item dropdown">
+                        <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            Giáo viên
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-noi'])}}">Học nói</a></li>
@@ -93,9 +104,6 @@
                             <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Học nghe</a></li>
                             <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Tài liệu</a></li>
                         </ul>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link text-white" href="{{route('teacher',['id'=>random_int(1,10)])}}">Giáo viên</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link text-white" href="{{route('index')}}#study-register">Đăng ký học thử</a>
