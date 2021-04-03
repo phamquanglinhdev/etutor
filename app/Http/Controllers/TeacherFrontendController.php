@@ -15,7 +15,7 @@ class TeacherFrontendController extends Controller
             'teacher_id'=>$request->teacher_id,
             'user_id'=>$request->user_id,
             'rate'=>$request->rate,
-            'content'=>$request->content,g
+            'content'=>$request->content,
         ];
         Comment::create($data);
         return redirect('/teacher/'.$id);
