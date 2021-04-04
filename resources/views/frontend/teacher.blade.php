@@ -102,7 +102,7 @@
                         <i class="fas fa-star text-warning"></i>
                         @endfor</h5>
                     <p>{{$comment->content}}</p>
-                    @if(backpack_auth()->check)
+                    @if(backpack_auth()->check())
                     @if(backpack_user()->id == $comment->users()->first()->id || backpack_user()->role ==0)
                     <a href="{{route('delete.comment',['teacher'=>$teacher->id,'id'=>$comment->id])}}">Xóa</a>
                     @endif
