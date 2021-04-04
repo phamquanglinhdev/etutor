@@ -2272,6 +2272,60 @@
             "install-path": "../intervention/image"
         },
         {
+            "name": "johan-code/backpack-ckeditor",
+            "version": "v1.0.3",
+            "version_normalized": "1.0.3.0",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/johangit/backpack-ckeditor.git",
+                "reference": "6937dd1cdf22b4785d997c045de9b1d4e281c8da"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/johangit/backpack-ckeditor/zipball/6937dd1cdf22b4785d997c045de9b1d4e281c8da",
+                "reference": "6937dd1cdf22b4785d997c045de9b1d4e281c8da",
+                "shasum": ""
+            },
+            "time": "2018-03-04T16:33:37+00:00",
+            "type": "library",
+            "extra": {
+                "laravel": {
+                    "providers": [
+                        "JohanCode\\BackpackCkeditor\\ServiceProvider"
+                    ]
+                }
+            },
+            "installation-source": "dist",
+            "autoload": {
+                "psr-4": {
+                    "JohanCode\\BackpackCkeditor\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "johan",
+                    "email": "misha2web@yandex.ru"
+                }
+            ],
+            "description": "backpack laravel widget ckeditor with custom options",
+            "homepage": "https://github.com/johangit/backpack-ckeditor",
+            "keywords": [
+                "CKEditor",
+                "backpack",
+                "laravel"
+            ],
+            "support": {
+                "issues": "https://github.com/johangit/backpack-ckeditor/issues",
+                "source": "https://github.com/johangit/backpack-ckeditor/tree/v1.0.3"
+            },
+            "abandoned": true,
+            "install-path": "../johan-code/backpack-ckeditor"
+        },
+        {
             "name": "laravel/framework",
             "version": "v8.34.0",
             "version_normalized": "8.34.0.0",

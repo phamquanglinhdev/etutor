@@ -26,7 +26,7 @@
             <div class="container py-5">
                 <div class=" rounded  p-3">
                     <div class="h4"><i class="fas fa-book pb-2"></i> Giới thiệu</div>
-                    <div class="h5">{!! $prolife->level !!}</div>
+                    <div>{!! $prolife->level !!}</div>
                     <div class="h4"><i class="fas fa-clock"></i> Thời gian nhận lớp</div>
                     <div class="teaching" id="teaching">
                         {!! $prolife->teaching !!}

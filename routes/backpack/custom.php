@@ -22,4 +22,5 @@ Route::group([
     Route::crud('prolife', 'ProlifeCrudController');
     Route::crud('cofig', 'CofigCrudController');
     Route::crud('user', 'UserCrudController');
+    Route::crud('page', 'PageCrudController');
 }); // this should be the absolute last line of this file

@@ -184,19 +184,19 @@
         @endphp
         @if(isset($comments))
             @foreach($comments as $comment)
-                <div class="media row m-0 p-3 bg-light mt-2 ">
-                    <div class="col-sm-3 col-12">
-                        <img class="w-100"
+                <div class="media row m-0 px-3 bg-light mt-2 ">
+                    <div class="col-sm-3 col-12" style="height: 80px; overflow: hidden">
+                        <img
+                             style="width: 120px;"
                              src="{{$comment->users()->first()->avatar}}"
                              alt="Generic placeholder image ">
                     </div>
                     <div class="media-body col-sm-9 col-12 ">
-                        <p class="font-italic h4    ">{{$comment->content}}</p>
-                        <p class="mt-0">{{$comment->users()->first()->name}}</p>
+                        <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
+                        <div class="font-italic h6">{{$comment->content}}</div>
                         @for($i=1;$i<=$comment->rate;$i++)
-                            <i class="fas fa-star text-warning mr-2"></i>
+                            <i class="fas fa-star text-warning mr-1"></i>
                         @endfor
-
                     </div>
                 </div>
             @endforeach

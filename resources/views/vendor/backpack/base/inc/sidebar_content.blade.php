@@ -21,3 +21,5 @@
     <li class='nav-item'><a class='nav-link' href='{{ backpack_url('user') }}'><i
                 class='nav-icon la la-user-alt-slash'></i> Người dùng</a></li>
 @endif
+
+<li class='nav-item'><a class='nav-link' href='{{ backpack_url('page') }}'><i class='nav-icon la la-question'></i> Pages</a></li>

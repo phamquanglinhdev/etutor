@@ -132,6 +132,10 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
             'Laravel\\Tinker\\' => 15,
             'Laravel\\Sail\\' => 13,
         ),
+        'J' => 
+        array (
+            'JohanCode\\BackpackCkeditor\\' => 27,
+        ),
         'I' => 
         array (
             'Intervention\\Image\\' => 19,
@@ -424,6 +428,10 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
         array (
             0 => __DIR__ . '/..' . '/laravel/sail/src',
         ),
+        'JohanCode\\BackpackCkeditor\\' => 
+        array (
+            0 => __DIR__ . '/..' . '/johan-code/backpack-ckeditor/src',
+        ),
         'Intervention\\Image\\' => 
         array (
             0 => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image',
@@ -584,6 +592,7 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
         'App\\Http\\Controllers\\Admin\\CofigCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CofigCrudController.php',
         'App\\Http\\Controllers\\Admin\\CourseCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CourseCrudController.php',
         'App\\Http\\Controllers\\Admin\\CustomerCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/CustomerCrudController.php',
+        'App\\Http\\Controllers\\Admin\\PageCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PageCrudController.php',
         'App\\Http\\Controllers\\Admin\\PostCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/PostCrudController.php',
         'App\\Http\\Controllers\\Admin\\ProlifeCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/ProlifeCrudController.php',
         'App\\Http\\Controllers\\Admin\\TagsCrudController' => __DIR__ . '/../..' . '/app/Http/Controllers/Admin/TagsCrudController.php',
@@ -592,6 +601,7 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
         'App\\Http\\Controllers\\CategoryFrontendController' => __DIR__ . '/../..' . '/app/Http/Controllers/CategoryFrontendController.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\CourseFrontendController' => __DIR__ . '/../..' . '/app/Http/Controllers/CourseFrontendController.php',
+        'App\\Http\\Controllers\\FrontendPageController' => __DIR__ . '/../..' . '/app/Http/Controllers/FrontendPageController.php',
         'App\\Http\\Controllers\\ListPostFrontendController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListPostFrontendController.php',
         'App\\Http\\Controllers\\ListTeacherController' => __DIR__ . '/../..' . '/app/Http/Controllers/ListTeacherController.php',
         'App\\Http\\Controllers\\PostFrondendController' => __DIR__ . '/../..' . '/app/Http/Controllers/PostFrondendController.php',
@@ -615,14 +625,17 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
         'App\\Http\\Requests\\CofigRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CofigRequest.php',
         'App\\Http\\Requests\\CourseRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CourseRequest.php',
         'App\\Http\\Requests\\CustomerRequest' => __DIR__ . '/../..' . '/app/Http/Requests/CustomerRequest.php',
+        'App\\Http\\Requests\\PageRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PageRequest.php',
         'App\\Http\\Requests\\PostRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PostRequest.php',
         'App\\Http\\Requests\\ProlifeRequest' => __DIR__ . '/../..' . '/app/Http/Requests/ProlifeRequest.php',
         'App\\Http\\Requests\\TagsRequest' => __DIR__ . '/../..' . '/app/Http/Requests/TagsRequest.php',
         'App\\Http\\Requests\\UserRequest' => __DIR__ . '/../..' . '/app/Http/Requests/UserRequest.php',
         'App\\Models\\Category' => __DIR__ . '/../..' . '/app/Models/Category.php',
         'App\\Models\\Cofig' => __DIR__ . '/../..' . '/app/Models/Cofig.php',
+        'App\\Models\\Comment' => __DIR__ . '/../..' . '/app/Models/Comment.php',
         'App\\Models\\Course' => __DIR__ . '/../..' . '/app/Models/Course.php',
         'App\\Models\\Customer' => __DIR__ . '/../..' . '/app/Models/Customer.php',
+        'App\\Models\\Page' => __DIR__ . '/../..' . '/app/Models/Page.php',
         'App\\Models\\Post' => __DIR__ . '/../..' . '/app/Models/Post.php',
         'App\\Models\\Prolife' => __DIR__ . '/../..' . '/app/Models/Prolife.php',
         'App\\Models\\Tags' => __DIR__ . '/../..' . '/app/Models/Tags.php',
@@ -3178,6 +3191,7 @@ class ComposerStaticInit0b3b3219127ec209e99a8925a52098e8
         'Intervention\\Image\\Point' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Point.php',
         'Intervention\\Image\\Response' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Response.php',
         'Intervention\\Image\\Size' => __DIR__ . '/..' . '/intervention/image/src/Intervention/Image/Size.php',
+        'JohanCode\\BackpackCkeditor\\ServiceProvider' => __DIR__ . '/..' . '/johan-code/backpack-ckeditor/src/ServiceProvider.php',
         'JsonException' => __DIR__ . '/..' . '/symfony/polyfill-php73/Resources/stubs/JsonException.php',
         'Laravel\\Sail\\Console\\InstallCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/InstallCommand.php',
         'Laravel\\Sail\\Console\\PublishCommand' => __DIR__ . '/..' . '/laravel/sail/src/Console/PublishCommand.php',

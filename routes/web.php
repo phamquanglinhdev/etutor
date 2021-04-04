@@ -43,3 +43,4 @@ Route::get('/preview/{url}',[\App\Http\Controllers\PreviewCourseController::clas
 Route::post('/',[\App\Http\Controllers\SaveCustomerController::class,'save'])->name('save.customer');
 Route::post('/teacher/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'save'])->name('save.comment');
 Route::get('/teacher/{teacher}/delete/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'delete',['teacher','id']])->where(['teacher','id'])->name('delete.comment');
+Route::get('page/{type}',[\App\Http\Controllers\FrontendPageController::class,'getData','type'])->where(['data'])->name('page');

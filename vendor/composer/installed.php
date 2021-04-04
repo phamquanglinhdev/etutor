@@ -1,12 +1,12 @@
 <?php return array (
   'root' => 
   array (
-    'pretty_version' => 'dev-main',
-    'version' => 'dev-main',
+    'pretty_version' => 'dev-master',
+    'version' => 'dev-master',
     'aliases' => 
     array (
     ),
-    'reference' => '955d514251dbc4197edefb55cf0d432cdf74b624',
+    'reference' => '328fe3f6b49633eb6e64f736b833b6ef5ba39f44',
     'name' => 'laravel/laravel',
   ),
   'versions' => 
@@ -521,6 +521,15 @@
       ),
       'reference' => 'abbf18d5ab8367f96b3205ca3c89fb2fa598c69e',
     ),
+    'johan-code/backpack-ckeditor' => 
+    array (
+      'pretty_version' => 'v1.0.3',
+      'version' => '1.0.3.0',
+      'aliases' => 
+      array (
+      ),
+      'reference' => '6937dd1cdf22b4785d997c045de9b1d4e281c8da',
+    ),
     'kodova/hamcrest-php' => 
     array (
       'replaced' => 
@@ -539,12 +548,12 @@
     ),
     'laravel/laravel' => 
     array (
-      'pretty_version' => 'dev-main',
-      'version' => 'dev-main',
+      'pretty_version' => 'dev-master',
+      'version' => 'dev-master',
       'aliases' => 
       array (
       ),
-      'reference' => '955d514251dbc4197edefb55cf0d432cdf74b624',
+      'reference' => '328fe3f6b49633eb6e64f736b833b6ef5ba39f44',
     ),
     'laravel/sail' => 
     array (
