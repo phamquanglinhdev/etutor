@@ -8,7 +8,8 @@ use Illuminate\Http\Request;
 class TeacherFrontendController extends Controller
 {
     public function index($id){
-        return view('frontend.teacher',['id'=>$id]);
+        $comments = Comment::where('teacher_id','=',$id)->orderBy('updated_at','DESC')->get();
+        return view('frontend.teacher',['id'=>$id,'comments'=>$comments]);
     }
     public function save(Request $request,$id){
         $data=[
@@ -19,5 +20,9 @@ class TeacherFrontendController extends Controller
         ];
         Comment::create($data);
         return redirect('/teacher/'.$id);
+    }
+    public function delete($teacher,$id){
+        Comment::find($id)->delete();
+        return redirect('/teacher/'.$teacher);
     }
 }

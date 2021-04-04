@@ -37,60 +37,83 @@
         {{--        Result--}}
         <div class="container">
             <div class="text-center text-origin py-5 h1">Đánh giá</div>
+            @php
+                $totalRate = $comments->count();
+                $avg = round($comments->average('rate'),1);
+                $ratingCount [1] =0;
+                $ratingCount [2] =0;
+                $ratingCount [3] =0;
+                $ratingCount [4] =0;
+                $ratingCount [5] =0;
+                foreach ($comments as $comment){
+                    switch ($comment->rate){
+                        case 1:$ratingCount[1]++;break;
+                        case 2:$ratingCount[2]++;break;
+                        case 3:$ratingCount[3]++;break;
+                        case 4:$ratingCount[4]++;break;
+                        case 5:$ratingCount[5]++;break;
+                    }
+                }
+            @endphp
             <div class="row">
                 <div class="col-md-6">
                     <div class="bg-light p-5">
                         <div class="text-dark h5">Đánh giá trung bình</div>
-                        <div class="h1">5 <i class=" text-warning fas fa-star text-warning mr-2"></i></div>
-                        <div>13 đánh giá</div>
+                        <div class="h1">{{$avg}} <i class=" text-warning fas fa-star text-warning mr-2"></i></div>
+                        <div>{{$totalRate}} đánh giá</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
                     <div class="my-3 progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-success"
-                             role="progressbar" style="width: 100%" aria-valuenow="25"
+                             role="progressbar" style="width: {{$ratingCount[5]/$totalRate*100}}%" aria-valuenow="25"
                              aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="my-3 progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-info" role="progressbar"
-                             style="width: 0%" aria-valuenow="50"
+                             style="width: {{$ratingCount[4]/$totalRate*100}}%" aria-valuenow="50"
                              aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="my-3 progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-warning"
-                             role="progressbar" style="width: 0%" aria-valuenow="75"
+                             role="progressbar" style="width: {{$ratingCount[3]/$totalRate*100}}%" aria-valuenow="75"
                              aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="my-3 progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-danger"
-                             role="progressbar" style="width: 0%" aria-valuenow="100"
+                             role="progressbar" style="width: {{$ratingCount[2]/$totalRate*100}}%" aria-valuenow="100"
                              aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                     <div class="my-3 progress">
                         <div class="progress-bar progress-bar-striped progress-bar-animated bg-dark" role="progressbar"
-                             style="width: 0%" aria-valuenow="100"
+                             style="width: {{$ratingCount[1]/$totalRate*100}}%" aria-valuenow="100"
                              aria-valuemin="0" aria-valuemax="100"></div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container">
-            <div class="media p-5">
-                <img class="mr-3 " style="max-width: 80px ;height: auto" src="https://thuthuatnhanh.com/wp-content/uploads/2019/12/anh-gai-xinh-de-thuong-cap-3-580x580.jpg" alt="Generic placeholder image">
+        <div class="container" style="max-height: 400px; overflow-y:scroll ; scroll-behavior: smooth ">
+            @foreach($comments as $comment)
+            <div class="media p-5 bg-light mt-2">
+                <img class="mr-3 " style="max-width: 80px ;height: auto" src="{{$comment->users()->first()->avatar}}" alt="Generic placeholder image">
                 <div class="media-body">
-                    <h5 class="mt-0">Trần Thị Linh</h5>
-                    <h5>@for($i=1;$i<=5;$i++)
+                    <h5 class="mt-0">{{$comment->users()->first()->name}}</h5>
+                    <h5>@for($i=1;$i<=$comment->rate;$i++)
                         <i class="fas fa-star text-warning"></i>
                         @endfor</h5>
-                    Khóa học rất hay và bỗ ích, cảm ơn cô rất nhiều !!
+                    <p>{{$comment->content}}</p>
+                    @if(backpack_user()->id == $comment->users()->first()->id || backpack_user()->role ==0)
+                    <a href="{{route('delete.comment',['teacher'=>$teacher->id,'id'=>$comment->id])}}">Xóa</a>
+                    @endif
                 </div>
             </div>
+            @endforeach
         </div>
         <div class="container">
-            <div class="">
+            <div class="pt-5">
                 @if(backpack_auth()->check())
                 <div class="h3">Đánh giá của bạn</div>
-                <form class="rating bg-light" action="{{route('save.comment',['id'=>$teacher->id])}}" method="post">
+                <form class="rating bg-light p-5" action="{{route('save.comment',['id'=>$teacher->id])}}" method="post">
                     @csrf
                     <input type="hidden" value="{{$teacher->id}}" name="teacher_id">
                     <input type="hidden" value="{{backpack_user()->id}}" name="user_id">

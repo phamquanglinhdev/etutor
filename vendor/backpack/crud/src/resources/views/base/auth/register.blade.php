@@ -22,6 +22,19 @@
                                 @endif
                             </div>
                         </div>
+                        <div class="form-group">
+                            <label class="control-label" for="phone">Số điện thoại</label>
+
+                            <div>
+                                <input type="text" class="form-control{{ $errors->has('name') ? ' is-invalid' : '' }}" name="phone" id="phone">
+
+                                @if ($errors->has('name'))
+                                    <span class="invalid-feedback">
+                                        <strong>{{ $errors->first('name') }}</strong>
+                                    </span>
+                                @endif
+                            </div>
+                        </div>
 
                         <div class="form-group">
                             <label class="control-label" for="{{ backpack_authentication_column() }}">{{ config('backpack.base.authentication_column_name') }}</label>
