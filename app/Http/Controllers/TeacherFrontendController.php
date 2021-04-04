@@ -20,6 +20,9 @@ class TeacherFrontendController extends Controller
             'content'=>$request->content,
         ];
         Comment::create($data);
+        if($data['teacher_id']==999999){
+            return redirect('/');
+        }
         return redirect('/teacher/'.$id);
     }
     public function delete($teacher,$id){

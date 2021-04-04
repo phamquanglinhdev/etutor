@@ -1,36 +1,36 @@
 @extends('layout.app')
 @section('slider')
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
-{{--        <ol class="carousel-indicators">--}}
-{{--            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--}}
-{{--            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--}}
-{{--            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--}}
-{{--        </ol>--}}
+        {{--        <ol class="carousel-indicators">--}}
+        {{--            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--}}
+        {{--            <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>--}}
+        {{--            <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>--}}
+        {{--        </ol>--}}
         <div class="carousel-inner">
             <div class="carousel-item active">
                 <img class="d-block w-100"
                      src="{{asset('uploads/banner-1.jpg')}}"
                      alt="First slide">
             </div>
-{{--            <div class="carousel-item">--}}
-{{--                <img class="d-block w-100"--}}
-{{--                     src="{{asset('uploads/banner-2.jpg')}}"--}}
-{{--                     alt="Second slide">--}}
-{{--            </div>--}}
-{{--            <div class="carousel-item">--}}
-{{--                <img class="d-block w-100"--}}
-{{--                     src="{{asset('uploads/banner-3.jpg')}}"--}}
-{{--                     alt="Third slide">--}}
-{{--            </div>--}}
+            {{--            <div class="carousel-item">--}}
+            {{--                <img class="d-block w-100"--}}
+            {{--                     src="{{asset('uploads/banner-2.jpg')}}"--}}
+            {{--                     alt="Second slide">--}}
+            {{--            </div>--}}
+            {{--            <div class="carousel-item">--}}
+            {{--                <img class="d-block w-100"--}}
+            {{--                     src="{{asset('uploads/banner-3.jpg')}}"--}}
+            {{--                     alt="Third slide">--}}
+            {{--            </div>--}}
         </div>
-{{--        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">--}}
-{{--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
-{{--            <span class="sr-only">Previous</span>--}}
-{{--        </a>--}}
-{{--        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">--}}
-{{--            <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
-{{--            <span class="sr-only">Next</span>--}}
-{{--        </a>--}}
+        {{--        <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">--}}
+        {{--            <span class="carousel-control-prev-icon" aria-hidden="true"></span>--}}
+        {{--            <span class="sr-only">Previous</span>--}}
+        {{--        </a>--}}
+        {{--        <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">--}}
+        {{--            <span class="carousel-control-next-icon" aria-hidden="true"></span>--}}
+        {{--            <span class="sr-only">Next</span>--}}
+        {{--        </a>--}}
     </div>
 @endsection
 @section('content')
@@ -50,8 +50,10 @@
                 <div class="p-3">
                     <img src="{{asset('uploads/intro-1.jpg')}}" class="pb-2 w-100">
                     <p><b>HỌC ONLINE TẠI NHÀ</b></p>
-                    <p>Bạn không cần mất thời gian cho việc đi lại hay tắc đường để có thể tới trung tâm học. Bạn có thể ngồi
-                        tại nhà để học và giỏi tiếng Anh chỉ với chiếc điện thoại, máy tính hoặc ipad kết nối internet.</p>
+                    <p>Bạn không cần mất thời gian cho việc đi lại hay tắc đường để có thể tới trung tâm học. Bạn có thể
+                        ngồi
+                        tại nhà để học và giỏi tiếng Anh chỉ với chiếc điện thoại, máy tính hoặc ipad kết nối
+                        internet.</p>
                 </div>
             </div>
             <div class="col-md-4 col-12 text-center">
@@ -88,7 +90,8 @@
                             <p>Học giao tiếp Online 1 - 1 với giáo viên Việt Nam – gv Philippine – gv Bản Ngữ.</p>
                         </div>
                     </a>
-                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}" class="btn btn-origin show">Xem chi tiết</a>
+                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}" class="btn btn-origin show">Xem
+                        chi tiết</a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 tran-shadow d-flex flex-column justify-content-between">
                     <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}"
@@ -103,7 +106,8 @@
                             <p>Học viết tiếng Anh từ cơ bản tới nâng cao, các dạng Email và báo cáo trong công việc.</p>
                         </div>
                     </a>
-                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}" class="btn btn-origin show">Xem chi tiết</a>
+                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}" class="btn btn-origin show">Xem chi
+                        tiết</a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">
                     <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}"
@@ -116,7 +120,8 @@
                             <p>Học ngữ pháp, phát âm, luyện thi IELTS, TOEIC và tiếng Anh chuyên ngành theo yêu cầu.</p>
                         </div>
                     </a>
-                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}" class="btn btn-origin show">Xem chi tiết</a>
+                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}" class="btn btn-origin show">Xem
+                        chi tiết</a>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">
                     <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}"
@@ -129,7 +134,8 @@
                             <p>Học giao tiếp – ngữ pháp – viết – luyện thi IELTS và TOEIC qua các video.</p>
                         </div>
                     </a>
-                    <a  href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}" class="btn btn-origin show">Xem chi tiết</a>
+                    <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}" class="btn btn-origin show">Xem chi
+                        tiết</a>
                 </div>
             </div>
             <div class="row pt-5">
@@ -151,7 +157,8 @@
                            class="link-style-none text-white">
                             <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">
                             <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
-                            <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên toàn thế giới.</p>
+                            <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên
+                                toàn thế giới.</p>
                         </a>
                     </div>
                     <a href="{{route('teachers',['type'=>1])}}" class="btn btn-origin">Xem chi tiết</a>
@@ -171,8 +178,60 @@
         </div>
     </div>
     <div class="container pb-5">
-        <div class="p-5 h2 text-center">HỌC VIÊN VÀ GIẢNG VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
-        <img src="{{asset('uploads/review.png')}}" class="w-100">
+        <div class="p-5 h2 text-center">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
+        @php
+            $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->limit(5)->get();
+        @endphp
+        @if(isset($comments))
+            @foreach($comments as $comment)
+                <div class="media row m-0 p-3 bg-light mt-2 ">
+                    <div class="col-sm-3 col-12">
+                        <img class="w-100"
+                             src="{{$comment->users()->first()->avatar}}"
+                             alt="Generic placeholder image ">
+                    </div>
+                    <div class="media-body col-sm-9 col-12 ">
+                        <p class="font-italic h4    ">{{$comment->content}}</p>
+                        <p class="mt-0">{{$comment->users()->first()->name}}</p>
+                        @for($i=1;$i<=$comment->rate;$i++)
+                            <i class="fas fa-star text-warning mr-2"></i>
+                        @endfor
+
+                    </div>
+                </div>
+            @endforeach
+        @endif
+        @if(backpack_auth()->check())
+            <div class="bg-origin p-1 rounded mt-2">
+                <div class="p-5">
+                    <div class="h3 text-white mb-2">Đánh giá của bạn</div>
+                    <form class="rating bg-light rounded p-5" action="{{route('save.comment',['id'=>'999999'])}}"
+                          method="post">
+                        @csrf
+                        <input type="hidden" value="999999" name="teacher_id">
+                        <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
+                        <input type="radio" id="star5" name="rate" value="5"/>
+                        <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star4" name="rate" value="4"/>
+                        <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star3" name="rate" value="3"/>
+                        <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star2" name="rate" value="2"/>
+                        <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star1" name="rate" value="1"/>
+                        <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <div class="mt-2">
+                            <textarea class="form-control" name="content" placeholder="Đánh giá của bạn"></textarea>
+                        </div>
+                        <div class="text-right pt-2">
+                            <button class="btn btn-origin pointed" type="submit">Gửi</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        @else
+            <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá </div>
+        @endif
     </div>
     <div class="container-fluid bg-dark text-white p-5 mb-5">
         <div class="container py-5">
