@@ -8,6 +8,7 @@ use Illuminate\Http\Request;
 class TeacherFrontendController extends Controller
 {
     public function index($id){
+        $comments=null;
         $comments = Comment::where('teacher_id','=',$id)->orderBy('updated_at','DESC')->get();
         return view('frontend.teacher',['id'=>$id,'comments'=>$comments]);
     }

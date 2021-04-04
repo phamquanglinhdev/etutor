@@ -38,13 +38,17 @@
         <div class="container">
             <div class="text-center text-origin py-5 h1">Đánh giá</div>
             @php
-                $totalRate = $comments->count();
+                $totalRateF = $comments->count();
+                if($totalRateF == 0){
+                    $totalRate=1;
+                }
                 $avg = round($comments->average('rate'),1);
                 $ratingCount [1] =0;
                 $ratingCount [2] =0;
                 $ratingCount [3] =0;
                 $ratingCount [4] =0;
                 $ratingCount [5] =0;
+                if(isset($comments)){
                 foreach ($comments as $comment){
                     switch ($comment->rate){
                         case 1:$ratingCount[1]++;break;
@@ -54,13 +58,14 @@
                         case 5:$ratingCount[5]++;break;
                     }
                 }
+                }
             @endphp
             <div class="row">
                 <div class="col-md-6">
                     <div class="bg-light p-5">
                         <div class="text-dark h5">Đánh giá trung bình</div>
                         <div class="h1">{{$avg}} <i class=" text-warning fas fa-star text-warning mr-2"></i></div>
-                        <div>{{$totalRate}} đánh giá</div>
+                        <div>{{$totalRateF}} đánh giá</div>
                     </div>
                 </div>
                 <div class="col-md-6 col-12">
@@ -94,48 +99,50 @@
         </div>
         <div class="container" style="max-height: 400px; overflow-y:scroll ; scroll-behavior: smooth ">
             @foreach($comments as $comment)
-            <div class="media p-5 bg-light mt-2">
-                <img class="mr-3 " style="max-width: 80px ;height: auto" src="{{$comment->users()->first()->avatar}}" alt="Generic placeholder image">
-                <div class="media-body">
-                    <h5 class="mt-0">{{$comment->users()->first()->name}}</h5>
-                    <h5>@for($i=1;$i<=$comment->rate;$i++)
-                        <i class="fas fa-star text-warning"></i>
-                        @endfor</h5>
-                    <p>{{$comment->content}}</p>
-                    @if(backpack_auth()->check())
-                    @if(backpack_user()->id == $comment->users()->first()->id || backpack_user()->role ==0)
-                    <a href="{{route('delete.comment',['teacher'=>$teacher->id,'id'=>$comment->id])}}">Xóa</a>
-                    @endif
-                    @endif
+                <div class="media p-5 bg-light mt-2">
+                    <img class="mr-3 " style="max-width: 80px ;height: auto"
+                         src="{{$comment->users()->first()->avatar}}" alt="Generic placeholder image">
+                    <div class="media-body">
+                        <h5 class="mt-0">{{$comment->users()->first()->name}}</h5>
+                        <h5>@for($i=1;$i<=$comment->rate;$i++)
+                                <i class="fas fa-star text-warning"></i>
+                            @endfor</h5>
+                        <p>{{$comment->content}}</p>
+                        @if(backpack_auth()->check())
+                            @if(backpack_user()->id == $comment->users()->first()->id || backpack_user()->role ==0)
+                                <a href="{{route('delete.comment',['teacher'=>$teacher->id,'id'=>$comment->id])}}">Xóa</a>
+                            @endif
+                        @endif
+                    </div>
                 </div>
-            </div>
             @endforeach
         </div>
         <div class="container">
             <div class="pt-5">
                 @if(backpack_auth()->check())
-                <div class="h3">Đánh giá của bạn</div>
-                <form class="rating bg-light p-5" action="{{route('save.comment',['id'=>$teacher->id])}}" method="post">
-                    @csrf
-                    <input type="hidden" value="{{$teacher->id}}" name="teacher_id">
-                    <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
-                    <input type="radio" id="star5" name="rate" value="5" />
-                    <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
-                    <input type="radio" id="star4" name="rate" value="4" />
-                    <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
-                    <input type="radio" id="star3" name="rate" value="3" />
-                    <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
-                    <input type="radio" id="star2" name="rate" value="2" />
-                    <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
-                    <input type="radio" id="star1" name="rate" value="1" />
-                    <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
-                    <div>
-                        <textarea class="form-control" name="content" placeholder="Đánh giá của bạn"></textarea>
-                    </div>
-                    <div class="text-right pt-2">
-                        <button  class="btn btn-origin pointed" type="submit">Gửi</button>
-                    </div>
-                </form>
+                    <div class="h3">Đánh giá của bạn</div>
+                    <form class="rating bg-light p-5" action="{{route('save.comment',['id'=>$teacher->id])}}"
+                          method="post">
+                        @csrf
+                        <input type="hidden" value="{{$teacher->id}}" name="teacher_id">
+                        <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
+                        <input type="radio" id="star5" name="rate" value="5"/>
+                        <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star4" name="rate" value="4"/>
+                        <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star3" name="rate" value="3"/>
+                        <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star2" name="rate" value="2"/>
+                        <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <input type="radio" id="star1" name="rate" value="1"/>
+                        <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
+                        <div>
+                            <textarea class="form-control" name="content" placeholder="Đánh giá của bạn"></textarea>
+                        </div>
+                        <div class="text-right pt-2">
+                            <button class="btn btn-origin pointed" type="submit">Gửi</button>
+                        </div>
+                    </form>
                 @endif
             </div>
         </div>
