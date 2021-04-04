@@ -41,6 +41,8 @@
                 $totalRateF = $comments->count();
                 if($totalRateF == 0){
                     $totalRate=1;
+                }else{
+                    $totalRate=$totalRateF;
                 }
                 $avg = round($comments->average('rate'),1);
                 $ratingCount [1] =0;
