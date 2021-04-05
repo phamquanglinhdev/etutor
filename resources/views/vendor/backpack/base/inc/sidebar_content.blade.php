@@ -24,4 +24,4 @@
 
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('page') }}'><i class='nav-icon la la-question'></i>Các trang tĩnh</a></li>
 <li class='nav-item'><a class='nav-link' href='{{ backpack_url('comment') }}'>
-        <i class='nav-icon la la-question'></i>{{?backpack_user()->role==0 ?'Đánh giá BizEnglish':'Đánh giá giáo viên '.backpack_user()->name}}</a></li>
+        <i class='nav-icon la la-question'></i>{{backpack_user()->role==0 ?'Đánh giá BizEnglish':'Đánh giá giáo viên '.backpack_user()->name}}</a></li>
