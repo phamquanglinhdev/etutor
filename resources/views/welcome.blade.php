@@ -182,8 +182,9 @@
         @php
             $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->limit(5)->get();
         @endphp
-        @if(isset($comments) && isset($comments->users()->first()->avatar))
+        @if(isset($comments))
             @foreach($comments as $comment)
+                @if(isset($comments->users()->first()->avatar))
                 <div class="media row m-0 px-3 bg-light mt-2 ">
                     <div class="col-sm-3 col-12" style="height: 80px; overflow: hidden">
                         <img
@@ -199,6 +200,7 @@
                         @endfor
                     </div>
                 </div>
+                @endif
             @endforeach
         @endif
         @if(backpack_auth()->check())
