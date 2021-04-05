@@ -159,12 +159,12 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Thông tin BizEnglish</h6>
                     <ul class="footer-links">
-                        <li><a href="{{route('tag',['slug'=>'khoa-hoc.html'])}}">Câu hỏi thường gặp</a></li>
-                        <li><a href="{{route('tag',['slug'=>'khoa-hoc-cho-nguoi-di-lam.html'])}}">Học phí và cách thanh toán</a>
+                        <li><a href="{{route('page',['type'=>'faq'])}}">Câu hỏi thường gặp</a></li>
+                        <li><a href="{{route('page',['type'=>'payment'])}}">Học phí và cách thanh toán</a>
                         </li>
-                        <li><a href="{{route('tag',['slug'=>'khoa-hoc-cho-sinh-vien.html'])}}">Trở thành giáo viên</a>
+                        <li><a href="{{route('page',['type'=>'be_teacher'])}}">Trở thành giáo viên</a>
                         </li>
-                        <li><a href="{{route('tag',['slug'=>'khoa-hoc-cho-online.html'])}}">Trờ thành đối tác của BizEnglish</a></li>
+                        <li><a href="{{route('page',['type'=>'be_client'])}}">Trờ thành đối tác của BizEnglish</a></li>
                         <li><a href="{{route('index')}}#study-regester">Đăng ký học thử</a></li>
                     </ul>
                 </div>
