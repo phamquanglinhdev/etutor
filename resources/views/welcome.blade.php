@@ -182,7 +182,7 @@
         @php
             $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->limit(5)->get();
         @endphp
-        @if(isset($comments))
+        @if(isset($comments) && isset($comments->users->first()->avatar))
             @foreach($comments as $comment)
                 <div class="media row m-0 px-3 bg-light mt-2 ">
                     <div class="col-sm-3 col-12" style="height: 80px; overflow: hidden">
