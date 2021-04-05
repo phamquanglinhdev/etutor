@@ -184,7 +184,7 @@
         @endphp
         @if(isset($comments))
             @foreach($comments as $comment)
-                @if(isset($comments->users()->first()->avatar))
+                @if(isset($comment->users()->first()->avatar))
                 <div class="media row m-0 px-3 bg-light mt-2 ">
                     <div class="col-sm-3 col-12" style="height: 80px; overflow: hidden">
                         <img
