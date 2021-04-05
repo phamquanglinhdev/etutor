@@ -13,10 +13,12 @@ class TeacherFrontendController extends Controller
         return view('frontend.teacher',['id'=>$id,'comments'=>$comments]);
     }
     public function save(Request $request,$id){
+        if(! isset($request->rate)){
+            $request->rate =5;
+        }
         $data=[
             'teacher_id'=>$request->teacher_id,
             'user_id'=>$request->user_id,
-            'rate'=>5,
             'rate'=>$request->rate,
             'content'=>$request->contents,
         ];
