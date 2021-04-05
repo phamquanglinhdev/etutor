@@ -30,7 +30,7 @@ class Page extends Model
     */
     public function updatePage($crud = false)
     {
-        return '<button class="btn btn-primary"><a class="text-white" href="'.redirect('/admin/page/1/edit').'" data-toggle="tooltip" title="Just a demo custom button.">Sửa</a></button>';
+        return redirect('/admin/page/1/edit');
     }
     /*
     |--------------------------------------------------------------------------
