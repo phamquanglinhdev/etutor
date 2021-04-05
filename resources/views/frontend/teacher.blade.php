@@ -101,6 +101,7 @@
         </div>
         <div class="container" style="max-height: 400px; overflow-y:scroll ; scroll-behavior: smooth ">
             @foreach($comments as $comment)
+                @if(isset($comment->users()->first()->name))
                 <div class="media p-5 bg-light mt-2">
                     <img class="mr-3 " style="max-width: 80px ;height: auto"
                          src="{{$comment->users()->first()->avatar}}" alt="Generic placeholder image">
@@ -118,6 +119,7 @@
                         @endif
                     </div>
                 </div>
+                @endif
             @endforeach
         </div>
         <div class="container">
