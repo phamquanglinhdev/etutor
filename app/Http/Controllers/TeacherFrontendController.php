@@ -17,7 +17,7 @@ class TeacherFrontendController extends Controller
             'teacher_id'=>$request->teacher_id,
             'user_id'=>$request->user_id,
             'rate'=>$request->rate,
-            'content'=>$request->content,
+            'content'=>$request->contents,
         ];
         Comment::create($data);
         if($data['teacher_id']==999999){

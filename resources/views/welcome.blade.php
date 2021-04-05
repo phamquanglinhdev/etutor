@@ -223,7 +223,7 @@
                         <input type="radio" id="star1" name="rate" value="1"/>
                         <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
                         <div class="mt-2">
-                            <textarea class="form-control" name="content" placeholder="Đánh giá của bạn"></textarea>
+                            <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn" required></textarea>
                         </div>
                         <div class="text-right pt-2">
                             <button class="btn btn-origin pointed" type="submit">Gửi</button>

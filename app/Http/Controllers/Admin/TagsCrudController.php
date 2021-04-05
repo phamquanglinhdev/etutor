@@ -29,6 +29,8 @@ class TagsCrudController extends CrudController
         CRUD::setModel(\App\Models\Tags::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/tags');
         CRUD::setEntityNameStrings('Nhãn', 'Các nhãn');
+        $this->crud->denyAccess('show');
+        $this->crud->addButtonFromModelFunction('line','ViewOnWeb','viewOnWeb','line');
     }
 
     /**

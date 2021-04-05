@@ -30,6 +30,8 @@ class CourseCrudController extends CrudController
         CRUD::setModel(\App\Models\Course::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/course');
         CRUD::setEntityNameStrings('Khóa học', 'Các khóa học');
+        $this->crud->addButtonFromModelFunction('line','ViewOnWeb','viewOnWeb','line');
+        $this->crud->denyAccess('show');
     }
 
     /**
