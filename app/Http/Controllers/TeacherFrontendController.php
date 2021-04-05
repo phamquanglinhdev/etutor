@@ -16,6 +16,7 @@ class TeacherFrontendController extends Controller
         $data=[
             'teacher_id'=>$request->teacher_id,
             'user_id'=>$request->user_id,
+            'rate'=>5,
             'rate'=>$request->rate,
             'content'=>$request->contents,
         ];
