@@ -2,7 +2,7 @@
 <html lang="vi">
 <head>
     @php
-    $config = \App\Models\Cofig::first();
+        $config = \App\Models\Cofig::first();
     @endphp
     <link rel="shortcut icon" href="{{asset('img/favicon.ico')}}"/>
     <title>{{isset($title) ? $title : env('APP_NAME')}}</title>
@@ -29,7 +29,8 @@
                     <span class="col-lg w-100"><i class="fas fa-mail-bulk"></i> {{$config->host_mail}}</span>
                     <span class="col-lg w-100"><a>Kiểm tra thử</a></span>
                     @if(backpack_auth()->check() && backpack_user()->role <= 1)
-                        <span class="col"><a class="text-white link-style-none" href="{{route('backpack.dashboard')}}"><i class="fas fa-user"></i> Quản trị</a></span>
+                        <span class="col"><a class="text-white link-style-none"
+                                             href="{{route('backpack.dashboard')}}"><i class="fas fa-user"></i> Quản trị</a></span>
                     @endif
                 </div>
             </div>
@@ -70,39 +71,52 @@
                         <a class="nav-link" href="{{route('index')}}">Trang chủ</a>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com"
+                           id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Khóa học
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học Giao Tiếp Online 1-1</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết Online 1-1</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học Theo Yêu Cầu</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học Video</a></li>
+                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học
+                                    Giao Tiếp Online 1-1</a></li>
+                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết
+                                    Online 1-1</a></li>
+                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học
+                                    Theo Yêu Cầu</a></li>
+                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học
+                                    Video</a></li>
 
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                        <a class="nav-link text-white dropdown-toggle" href="http://example.com"
+                           id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Giáo viên
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>0])}}">Giáo viên Việt Nam</a></li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Giáo viên Philipines</a></li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Giáo viên bản ngữ</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>0])}}">Giáo viên Việt Nam</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Giáo viên
+                                    Philipines</a></li>
+                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Giáo viên bản ngữ</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item dropdown">
-                        <a class="nav-link text-white dropdown-toggle" href="http://example.com" id="navbarDropdownMenuLink"
+                        <a class="nav-link text-white dropdown-toggle" href="http://example.com"
+                           id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chia sẻ kinh nghiệm
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
                             <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-noi'])}}">Học nói</a></li>
-                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-viet'])}}">Học viết</a></li>
-                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Học nghe</a></li>
-                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Tài liệu</a></li>
+                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-viet'])}}">Học viết</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Học nghe</a>
+                            </li>
+                            <li><a class="dropdown-item" href="{{route('posts',['slug'=>'hoc-nghe'])}}">Tài liệu</a>
+                            </li>
                         </ul>
                     </li>
                     <li class="nav-item">
@@ -139,16 +153,19 @@
                             <input type="text" name="email" class="form-control" placeholder="Email của bạn"
                                    aria-label="Recipient's username" aria-describedby="basic-addon2">
                             <div class="input-group-append">
-                                <button class="btn btn-outline-secondary" type="button"><i class="fas fa-paper-plane"></i>
+                                <button class="btn btn-outline-secondary" type="button"><i
+                                        class="fas fa-paper-plane"></i>
                                 </button>
                             </div>
                         </div>
                     </form>
                     <div class="">
-                        <div><i class="fas fa-map-marked"></i>  Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà Nội.</div>
+                        <div><i class="fas fa-map-marked"></i> Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà Nội.
+                        </div>
                         <div><i class="fas fa-building"></i>
                             Văn phòng giao dịch Hà Nội:<br>
-                            Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.</div>
+                            Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.
+                        </div>
                         <div><i class="fas fa-building"></i>
                             Văn phòng giao dịch Đà Nẵng:<br>
                             Số 80 Trần Văn Dư, quận Ngũ Hành Sơn, Tp Đà Nẵng.
@@ -171,11 +188,17 @@
 
                 <div class="col-xs-6 col-md-3">
                     <h6>Kết nối với BizEnglish</h6>
-                    <ul class="footer-links">
-                        <li><a href="https://www.facebook.com/bizenglishforsuccess/">Facebook : BizEnglish</a></li>
-                        <li><a href="#">Zalo</a></li>
-                        <li><a href="mail/bizenglishforsuccess@gmail.com">Email:bizenglishforsuccess@gmail.com</a></li>
-                    </ul>
+                    <div class="fb-page" data-href="https://www.facebook.com/bizenglishforsuccess/" data-tabs=""
+                         data-width="" data-height="" data-small-header="true" data-adapt-container-width="false"
+                         data-hide-cover="false" data-show-facepile="true">
+                        <blockquote cite="https://www.facebook.com/bizenglishforsuccess/" class="fb-xfbml-parse-ignore">
+                            <a href="https://www.facebook.com/bizenglishforsuccess/">BIZ English - Dạy Nói và Viết Tiếng
+                                Anh Online Cho Người Đi Làm</a></blockquote>
+                    </div>
+                    <div class="text-white mt-2"><i class="fas fa-phone"></i> Hotline</div>
+                    <div class="text-origin h5"> 0977281661</div>
+                    <div class="text-white mt-2"><i class="fas fa-mail-bulk"></i> Email</div>
+                    <div class="text-origin h5"> bizenglishforsuccess@gmail.com</div>
                 </div>
             </div>
             <hr>
@@ -190,10 +213,9 @@
 
                 <div class="col-md-4 col-sm-6 col-xs-12">
                     <ul class="social-icons">
-                        <li><a class="facebook" href="#"><i class="fab fa-facebook"></i></a></li>
-                        <li><a class="twitter" href="#"><i class="fab fa-twitter"></i></a></li>
-                        <li><a class="dribbble" href="#"><i class="fab fa-dribbble"></i></a></li>
-                        <li><a class="linkedin" href="#"><i class="fab fa-linkedin"></i></a></li>
+                        <li><a class="bg-primary text-white" href="https://www.facebook.com/bizenglishforsuccess/"><i class="fab fa-facebook"></i></a></li>
+                        <li><a class="bg-danger text-white" href="https://www.youtube.com/channel/UCN5yXnMNbee92FQWR2Eq2nQ"><i class="fab fa-youtube"></i></a></li>
+                        <li><a class="bg-primary" href="https://zalo.me/0977281661"><img src="https://cdn.freebiesupply.com/logos/large/2x/zalo-1-logo-black-and-white.png" class="w-100 rounded-circle"></a></li>
                     </ul>
                 </div>
             </div>
@@ -220,17 +242,18 @@
 <!-- Load Facebook SDK for JavaScript -->
 <div id="fb-root"></div>
 <script>
-    window.fbAsyncInit = function() {
+    window.fbAsyncInit = function () {
         FB.init({
-            xfbml            : true,
-            version          : 'v10.0'
+            xfbml: true,
+            version: 'v10.0'
         });
     };
 
-    (function(d, s, id) {
+    (function (d, s, id) {
         var js, fjs = d.getElementsByTagName(s)[0];
         if (d.getElementById(id)) return;
-        js = d.createElement(s); js.id = id;
+        js = d.createElement(s);
+        js.id = id;
         js.src = 'https://connect.facebook.net/vi_VN/sdk/xfbml.customerchat.js';
         fjs.parentNode.insertBefore(js, fjs);
     }(document, 'script', 'facebook-jssdk'));</script>
@@ -239,7 +262,7 @@
 <div class="fb-customerchat"
      attribution="setup_tool"
      page_id="400513617073068"
-     color = "#00B0F0">
+     color="#00B0F0">
 </div>
 </body>
 </html>
