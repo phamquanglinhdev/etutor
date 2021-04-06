@@ -160,6 +160,7 @@
                         </div>
                     </form>
                     <div class="">
+                        <h6>CÔNG TY TNHH BIZ ENGLISH</h6>
                         <div><i class="fas fa-map-marked"></i> Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà Nội.
                         </div>
                         <div><i class="fas fa-building"></i>

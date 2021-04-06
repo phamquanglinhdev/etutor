@@ -180,19 +180,20 @@
     <div class="container pb-5">
         <div class="p-5 h2 text-center">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
         @php
-            $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->limit(5)->get();
+            $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->get();
         @endphp
         @if(isset($comments))
+            <div style="overflow-y: scroll;max-height: 500px">
             @foreach($comments as $comment)
                 @if(isset($comment->users()->first()->name))
                 <div class="media row m-0 px-3 bg-light mt-2 ">
-                    <div class="col-sm-3 col-12" style="height: 80px; overflow: hidden">
+                    <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
                         <img
                              style="width: 120px;"
                              src="{{$comment->users()->first()->avatar}}"
                              alt="Generic placeholder image ">
                     </div>
-                    <div class="media-body col-sm-9 col-12 ">
+                    <div class="media-body col-sm-10 col-12 ">
                         <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
                         <div class="font-italic h6">{{$comment->content}}</div>
                         @for($i=1;$i<=$comment->rate;$i++)
@@ -202,6 +203,7 @@
                 </div>
                 @endif
             @endforeach
+            </div>
         @endif
         @if(backpack_auth()->check())
             <div class="bg-origin p-1 rounded mt-2">
