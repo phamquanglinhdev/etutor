@@ -168,7 +168,7 @@
         }
 
         #teaching::-webkit-scrollbar-thumb {
-            background-color: black;
+            background-color: white;
         }
 
         .teaching {
@@ -176,7 +176,7 @@
         }
 
         .teaching td {
-            padding: 6px;
+            padding: 5px;
             border: 4px solid white;
         }
 
