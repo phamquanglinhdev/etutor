@@ -61,7 +61,12 @@
                     // resizer (because image size is controlled by widget styles or the image takes maximum
                     // 100% of the editor width).
                     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
-                    image2_disableResizer: true
+                    image2_disableResizer: true,
+
+                    filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
+                    filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
+                    filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
+                    filebrowserImageUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images'
                 });
             }
             // $('textarea').attr('id','editor').each(
