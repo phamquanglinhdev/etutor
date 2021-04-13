@@ -63,8 +63,8 @@
                     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
                     image2_disableResizer: true,
 
-                    filebrowserBrowseUrl: '/uploads',
-                    filebrowserImageBrowseUrl: '/uploads',
+                    filebrowserBrowseUrl: '/admin/elfinder#elf_l1_Lw',
+                    filebrowserImageBrowseUrl: '/admin/elfinder#elf_l1_Lw',
                     filebrowserUploadUrl: '/uploads',
                     filebrowserImageUploadUrl: '/uploads'
                 });
