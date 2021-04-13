@@ -63,10 +63,10 @@
                     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
                     image2_disableResizer: true,
 
-                    filebrowserBrowseUrl: '/uploads/',
-                    filebrowserImageBrowseUrl: '/uploads/',
-                    filebrowserUploadUrl: '/uploads/',
-                    filebrowserImageUploadUrl: '/uploads/'
+                    filebrowserBrowseUrl: '/uploads',
+                    filebrowserImageBrowseUrl: '/uploads',
+                    filebrowserUploadUrl: '/uploads',
+                    filebrowserImageUploadUrl: '/uploads'
                 });
             }
             // $('textarea').attr('id','editor').each(
