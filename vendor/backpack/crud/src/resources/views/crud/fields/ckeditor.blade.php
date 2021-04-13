@@ -63,10 +63,10 @@
                     image2_alignClasses: ['image-align-left', 'image-align-center', 'image-align-right'],
                     image2_disableResizer: true,
 
-                    filebrowserBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html',
-                    filebrowserImageBrowseUrl: '/apps/ckfinder/3.4.5/ckfinder.html?type=Images',
-                    filebrowserUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Files',
-                    filebrowserImageUploadUrl: '/apps/ckfinder/3.4.5/core/connector/php/connector.php?command=QuickUpload&type=Images'
+                    filebrowserBrowseUrl: '/uploads/',
+                    filebrowserImageBrowseUrl: '/uploads/',
+                    filebrowserUploadUrl: '/uploads/',
+                    filebrowserImageUploadUrl: '/uploads/'
                 });
             }
             // $('textarea').attr('id','editor').each(
