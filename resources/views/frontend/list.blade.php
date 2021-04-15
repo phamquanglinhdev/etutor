@@ -20,9 +20,11 @@
                 <div class="col-md-3 col-12 p-3">
                     <div class="bg-origin text-white p-2 text-uppercase h6">Khóa học liên quan</div>
                     @foreach($relate as $tag)
-                        <div class="p-2 bg-light border">
-                            <a class="text-dark link-style-none" href="{{route('tag',$tag->slug)}}">{{$tag->name}}</a>
-                        </div>
+                        @if($tag->name != $result->name)
+                            <div class="p-2 bg-light border">
+                                <a class="text-dark link-style-none" href="{{route('tag',$tag->slug)}}">{{$tag->name}}</a>
+                            </div>
+                        @endif
                     @endforeach
                 </div>
                 <div class="col-md-9 col-12 p-1">
