@@ -5,7 +5,7 @@
     if(isset($result)){
         $listCourse =$result->Courses()->get();
         $last = explode(' ',$result->name)[0];
-        $relate = \App\Models\Tags::where('name','like','%'.$last.'%')->limit(8)->get();
+        $relate = \App\Models\Tags::limit(8)->get();
     }
 
 
