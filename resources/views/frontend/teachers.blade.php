@@ -72,6 +72,14 @@
             </div>
         @endforeach
     </div>
-    <style>
-    </style>
+    <script>
+        $("table").css('width',"400px");
+        $( "td" ).each(function() {
+            if($(this).html() != "&nbsp;"){
+                $(this).addClass("text-origin")
+                $(this).addClass("bg-origin")
+
+            }
+        });
+    </script>
 @endsection
