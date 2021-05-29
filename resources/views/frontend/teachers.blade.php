@@ -1,9 +1,26 @@
 @extends('layout.app')
 @section('content')
-    <div class = "filter">
-        <form>
-            <label>Khóa học</label>
-            <input type="checkbox" value="1" name="data-teach"> Khóa học cho người dz
+    <div class = "container">
+        <form action="#" method="post">
+            @csrf
+            <div class="col-md-3 col-sm-6 col-12">
+                <label>Khóa học</label>
+                <input type="checkbox" value="1" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="2" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="3" name="data-teach"> Khóa học cho người dz
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <label>Thời Gian</label>
+                <input type="checkbox" value="4" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="5" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="6" name="data-teach"> Khóa học cho người dz
+            </div>
+            <div class="col-md-3 col-sm-6 col-12">
+                <label>Học Phí</label>
+                <input type="checkbox" value="7" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="8" name="data-teach"> Khóa học cho người dz
+                <input type="checkbox" value="9" name="data-teach"> Khóa học cho người dz
+            </div>
         </form>
     </div>
     <div class="container">
