@@ -36,7 +36,7 @@
                 <a href="{{route('teacher',['id'=>$data[$key]['id']])}}">
                     <div class="row">
                         <div class="col-md-3 col-sm-6-col-12">
-                            <img class="img-fluid"
+                            <img class="img-fluid" alt="noe"
                                  src="{{ $data[$key]['avatar'] != null ? $data[$key]['avatar'] : 'https://cloudcone.com/wp-content/uploads/2019/03/blank-avatar.jpg'}}">
                         </div>
                         <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
@@ -50,9 +50,9 @@
                                 <div class="col-md-6 col-12">
                                     <nav>
                                         <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home" role="tab" aria-controls="nav-home-{{$key}}" aria-selected="true">Home</a>
-                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile" role="tab" aria-controls="nav-profile-{{$key}}" aria-selected="false">Lịch dạy</a>
-                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact" role="tab" aria-controls="nav-contact-{{$key}}" aria-selected="false">Tôi muốn học</a>
+                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home-{{$key}}" role="tab" aria-controls="nav-home-{{$key}}" aria-selected="true">Home</a>
+                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile-{{$key}}" role="tab" aria-controls="nav-profile-{{$key}}" aria-selected="false">Lịch dạy</a>
+                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact-{{$key}}" role="tab" aria-controls="nav-contact-{{$key}}" aria-selected="false">Tôi muốn học</a>
                                         </div>
                                     </nav>
                                     <div class="tab-content" id="nav-tabContent">
@@ -75,11 +75,5 @@
         @endforeach
     </div>
     <style>
-        .avatar {
-            image-orientation: grad;
-            position: absolute;
-            height: 200px;
-            overflow: hidden;
-        }
     </style>
 @endsection
