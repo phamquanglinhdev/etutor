@@ -1,5 +1,11 @@
 @extends('layout.app')
 @section('content')
+    <div class = "filter">
+        <form>
+            <label>Khóa học</label>
+            <input type="checkbox" value="1" name="data-teach"> Khóa học cho người dz
+        </form>
+    </div>
     <div class="container">
         <div class="p-5 h1 text-origin text-center">
             {{$title}}
