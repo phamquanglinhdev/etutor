@@ -59,7 +59,7 @@
                                             TAV
                                         </div>
                                         <div class="tab-pane fade" id="nav-profile-{{$key}}" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                            {{$data[$key]['table']}}
+                                            {!!  $data[$key]['table'] !!}
                                         </div>
                                         <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel" aria-labelledby="nav-contact-tab">
                                             BB
