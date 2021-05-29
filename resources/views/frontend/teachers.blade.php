@@ -45,6 +45,9 @@
                                 <div class="w-100">
                                     {!! $data[$key]['level']!!}
                                 </div>
+                                <div class="text-center">
+                                    <button class="text-origin"><a href="{{route('teacher',$data[$key]['id'])}}" class="link-style-none">Xem chi tiết</a></button>
+                                </div>
                             </div>
                             <div class="col-md-6 col-12">
                                 <nav>
