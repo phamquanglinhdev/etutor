@@ -33,53 +33,65 @@
         </div>
         @foreach($data as $key => $teacher)
             <div class="border p-3 shadow">
-                    <div class="row">
-                        <div class="col-md-3 col-sm-6-col-12">
-                            <img class="img-fluid" alt="noe"
-                                 src="{{ $data[$key]['avatar'] != null ? $data[$key]['avatar'] : 'https://cloudcone.com/wp-content/uploads/2019/03/blank-avatar.jpg'}}">
-                        </div>
-                        <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
-                            <div class="row">
-                                <div class="col-md-6 col-12">
-                                    <b class="h4">{{$data[$key]['name']}}</b>
-                                    <div class="w-100">
-                                        {!! $data[$key]['level']!!}
-                                    </div>
+                <div class="row">
+                    <div class="col-md-3 col-sm-6-col-12">
+                        <img class="img-fluid" alt="noe"
+                             src="{{ $data[$key]['avatar'] != null ? $data[$key]['avatar'] : 'https://cloudcone.com/wp-content/uploads/2019/03/blank-avatar.jpg'}}">
+                    </div>
+                    <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
+                        <div class="row">
+                            <div class="col-md-6 col-12">
+                                <b class="h4">{{$data[$key]['name']}}</b>
+                                <div class="w-100">
+                                    {!! $data[$key]['level']!!}
                                 </div>
-                                <div class="col-md-6 col-12">
-                                    <nav>
-                                        <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                            <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab" href="#nav-home-{{$key}}" role="tab" aria-controls="nav-home-{{$key}}" aria-selected="true">Home</a>
-                                            <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab" href="#nav-profile-{{$key}}" role="tab" aria-controls="nav-profile-{{$key}}" aria-selected="false">Lịch dạy</a>
-                                            <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab" href="#nav-contact-{{$key}}" role="tab" aria-controls="nav-contact-{{$key}}" aria-selected="false">Tôi muốn học</a>
-                                        </div>
-                                    </nav>
-                                    <div class="tab-content" id="nav-tabContent">
-                                        <div class="tab-pane fade show active" id="nav-home-{{$key}}" role="tabpanel" aria-labelledby="nav-home-tab">
-                                            TAV
-                                        </div>
-                                        <div class="tab-pane fade" id="nav-profile-{{$key}}" role="tabpanel" aria-labelledby="nav-profile-tab">
-                                            {!!  $data[$key]['table'] !!}
-                                        </div>
-                                        <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel" aria-labelledby="nav-contact-tab">
-                                            BB
-                                        </div>
+                            </div>
+                            <div class="col-md-6 col-12">
+                                <nav>
+                                    <div class="nav nav-tabs" id="nav-tab" role="tablist">
+                                        <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
+                                           href="#nav-home-{{$key}}" role="tab" aria-controls="nav-home-{{$key}}"
+                                           aria-selected="true">Home</a>
+                                        <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
+                                           href="#nav-profile-{{$key}}" role="tab" aria-controls="nav-profile-{{$key}}"
+                                           aria-selected="false">Lịch dạy</a>
+                                        <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
+                                           href="#nav-contact-{{$key}}" role="tab" aria-controls="nav-contact-{{$key}}"
+                                           aria-selected="false">Tôi muốn học</a>
+                                    </div>
+                                </nav>
+                                <div class="tab-content" id="nav-tabContent">
+                                    <div class="tab-pane fade show active" id="nav-home-{{$key}}" role="tabpanel"
+                                         aria-labelledby="nav-home-tab">
+                                        TAV
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-profile-{{$key}}" role="tabpanel"
+                                         aria-labelledby="nav-profile-tab">
+                                        {!!  $data[$key]['table'] !!}
+                                    </div>
+                                    <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel"
+                                         aria-labelledby="nav-contact-tab">
+                                        <iframe width="1280" height="640"
+                                                src="https://www.youtube.com/embed/7Q1I5nuBa6w"
+                                                title="YouTube video player" frameborder="0"
+                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                                                allowfullscreen></iframe>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
             </div>
         @endforeach
     </div>
     <script>
-        $("table").css('width',"400px");
-        $( "td" ).each(function() {
-            if($(this).html() != "&nbsp;"){
+        $("table").css('width', "400px");
+        $("td").each(function () {
+            if ($(this).html() != "&nbsp;") {
                 $(this).addClass("text-origin")
                 $(this).addClass("bg-origin")
                 $(this).html("Hav")
-
             }
         });
     </script>
