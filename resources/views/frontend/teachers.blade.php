@@ -1,7 +1,7 @@
 @extends('layout.app')
 @section('content')
     <div class = "container">
-        <form action="#" method="post">
+        <form action="#" method="get">
             @csrf
             <div class="row p-3">
                 @for($a=1;$a<=4;$a++)
