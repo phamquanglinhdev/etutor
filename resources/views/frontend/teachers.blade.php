@@ -16,6 +16,9 @@
                     </div>
                 @endfor
             </div>
+            <div class="text-center">
+                <button type="submit" class="btn btn-origin">Lọc</button>
+            </div>
         </form>
     </div>
     <div class="container">
