@@ -3,9 +3,9 @@
     <div class = "container">
         <form action="#" method="post">
             @csrf
-            <div class="row">
+            <div class="row p-3">
                 <div class="col-md-3 col-sm-6 col-12">
-                    <label>Khóa học</label>
+                    <div class="font-weight-bold text-origin">Khóa học</div>
                     <div class="form-check-inline">
                         <input type="checkbox" value="1" name="data-teach"> Khóa học cho người dz
                     </div>
@@ -17,7 +17,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <label>Thời Gian</label>
+                    <div class="font-weight-bold text-origin">Khóa học</div>
                     <div class="form-check-inline">
                         <input type="checkbox" value="4" name="data-teach"> Khóa học cho người dz
                     </div>
@@ -29,7 +29,7 @@
                     </div>
                 </div>
                 <div class="col-md-3 col-sm-6 col-12">
-                    <label>Học Phí</label>
+                    <div class="font-weight-bold text-origin">Khóa học</div>
                     <div class="form-check-inline">
                         <input type="checkbox" value="7" name="data-teach"> Khóa học cho người dz
                     </div>
