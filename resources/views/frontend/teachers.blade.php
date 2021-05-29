@@ -32,21 +32,23 @@
             {{$title}}
         </div>
         @foreach($data as $key => $teacher)
-            <a href="{{route('teacher',['id'=>$data[$key]['id']])}}">
-                <div class="row">
-                    <div class="col-md-3 col-sm-6-col-12">
-                        <img class="img-fluid"
-                             src="{{ $data[$key]['avatar'] != null ? $data[$key]['avatar'] : 'https://cloudcone.com/wp-content/uploads/2019/03/blank-avatar.jpg'}}">
-                    </div>
-                    <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
-                        <div class="row">
-                            <div class="col-md-6 col-12">
-                                <b>{{$data[$key]['name']}}</b>
+            <div class="border p-3 shadow">
+                <a href="{{route('teacher',['id'=>$data[$key]['id']])}}">
+                    <div class="row">
+                        <div class="col-md-3 col-sm-6-col-12">
+                            <img class="img-fluid"
+                                 src="{{ $data[$key]['avatar'] != null ? $data[$key]['avatar'] : 'https://cloudcone.com/wp-content/uploads/2019/03/blank-avatar.jpg'}}">
+                        </div>
+                        <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
+                            <div class="row">
+                                <div class="col-md-6 col-12">
+                                    <b>{{$data[$key]['name']}}</b>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
-            </a>
+                </a>
+            </div>
         @endforeach
     </div>
     <style>
