@@ -9,8 +9,8 @@
                         <div class="font-weight-bold text-origin">Khóa học</div>
                         @for($i=1;$i<=3;$i++)
                             <div class="form-check-inline">
-                                <input id="data-{{$i}}" type="checkbox" value="{{$i}}" name="data-teach">
-                                <label for="data-{{$i}}">Khóa học mẫu {{$i}}</label>
+                                <input id="data-{{$i*$a}}" type="checkbox" value="{{$i*$a}}" name="data-teach">
+                                <label for="data-{{$i*$a}}">Khóa học mẫu {{$i*$a}}</label>
                             </div>
                         @endfor
                     </div>
