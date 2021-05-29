@@ -46,7 +46,7 @@
                                     {!! $data[$key]['level']!!}
                                 </div>
                                 <div class="text-center">
-                                    <button class="text-origin"><a href="{{route('teacher',$data[$key]['id'])}}" class="link-style-none">Xem chi tiết</a></button>
+                                    <button class="btn btn-origin"><a href="{{route('teacher',$data[$key]['id'])}}" class="link-style-none">Xem chi tiết</a></button>
                                 </div>
                             </div>
                             <div class="col-md-6 col-12">
@@ -67,7 +67,7 @@
                                     <div class="tab-pane fade show active" id="nav-home-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-home-tab">
                                         @php
-                                            $comments = \App\Models\Comment::where('teacher_id','=',$id)->orderBy('updated_at','DESC')->get();
+                                            $comments = \App\Models\Comment::where('teacher_id','=',$data[$key]['id'])->orderBy('updated_at','DESC')->get();
                                         @endphp
                                         @foreach($comments as $comment)
                                             <img src="{{$comment->user()->first()->avatar}}" class="w-100">
