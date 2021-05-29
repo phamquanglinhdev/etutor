@@ -7,7 +7,7 @@
                 <div class="col-md-3 col-sm-6 col-12">
                     <div class="font-weight-bold text-origin">Khóa học</div>
                     <div class="form-check-inline">
-                        <input type="checkbox" value="1" name="data-teach"> Khóa học cho người dz
+                        <input type="checkbox" value="1" name="data-teach" aria-label="Khóa học cho người dz">
                     </div>
                     <div class="form-check-inline">
                         <input type="checkbox" value="2" name="data-teach"> Khóa học cho người dz
