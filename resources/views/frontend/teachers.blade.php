@@ -33,7 +33,6 @@
         </div>
         @foreach($data as $key => $teacher)
             <div class="border p-3 shadow">
-                <a href="{{route('teacher',['id'=>$data[$key]['id']])}}">
                     <div class="row">
                         <div class="col-md-3 col-sm-6-col-12">
                             <img class="img-fluid" alt="noe"
@@ -70,7 +69,6 @@
                             </div>
                         </div>
                     </div>
-                </a>
             </div>
         @endforeach
     </div>
