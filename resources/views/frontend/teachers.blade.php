@@ -4,42 +4,17 @@
         <form action="#" method="post">
             @csrf
             <div class="row p-3">
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="font-weight-bold text-origin">Khóa học</div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="1" name="data-teach" aria-label="Khóa học cho người dz">
+                @for($a=1;$a<=4;$a++)
+                    <div class="col-md-3 col-sm-6 col-12">
+                        <div class="font-weight-bold text-origin">Khóa học</div>
+                        @for($i=1;$i<=3;$i++)
+                            <div class="form-check-inline">
+                                <input id="data-{{$i}}" type="checkbox" value="{{$i}}" name="data-teach">
+                                <label for="data{{$i}}">Khóa học mẫu {{$i}}</label>
+                            </div>
+                        @endfor
                     </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="2" name="data-teach"> Khóa học cho người dz
-                    </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="3" name="data-teach"> Khóa học cho người dz
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="font-weight-bold text-origin">Khóa học</div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="4" name="data-teach"> Khóa học cho người dz
-                    </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="5" name="data-teach"> Khóa học cho người dz
-                    </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="6" name="data-teach"> Khóa học cho người dz
-                    </div>
-                </div>
-                <div class="col-md-3 col-sm-6 col-12">
-                    <div class="font-weight-bold text-origin">Khóa học</div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="7" name="data-teach"> Khóa học cho người dz
-                    </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="8" name="data-teach"> Khóa học cho người dz
-                    </div>
-                    <div class="form-check-inline">
-                        <input type="checkbox" value="9" name="data-teach"> Khóa học cho người dz
-                    </div>
-                </div>
+                @endfor
             </div>
         </form>
     </div>
