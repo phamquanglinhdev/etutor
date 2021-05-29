@@ -10,7 +10,7 @@
                         @for($i=1;$i<=3;$i++)
                             <div class="form-check-inline">
                                 <input id="data-{{$i}}" type="checkbox" value="{{$i}}" name="data-teach">
-                                <label for="data{{$i}}">Khóa học mẫu {{$i}}</label>
+                                <label for="data-{{$i}}">Khóa học mẫu {{$i}}</label>
                             </div>
                         @endfor
                     </div>
