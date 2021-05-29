@@ -41,8 +41,11 @@
                         </div>
                         <div class="text-dark p-2 col-md-9 col-sm-6 col-12">
                             <div class="row">
-                                <div class="col-md-6 col-12">
+                                <div class="col-md-6 col-12 h4">
                                     <b>{{$data[$key]['name']}}</b>
+                                </div>
+                                <div class="w-100">
+                                    {{$data[$key]['level']}}
                                 </div>
                             </div>
                         </div>
