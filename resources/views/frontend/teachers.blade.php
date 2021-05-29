@@ -70,8 +70,16 @@
                                             $comments = \App\Models\Comment::where('teacher_id','=',$data[$key]['id'])->orderBy('updated_at','DESC')->get();
                                         @endphp
                                         @foreach($comments as $comment)
-                                            <img src="{{$comment->users()->first()->avatar}}" class="w-100">
-                                            <span>{{$comment->content}}</span>
+                                            <div class="media">
+                                                <div class="media-left">
+                                                    <img src="{{$comment->users()->first()->avatar}}" class="media-object" style="width:60px">
+                                                </div>
+                                                <div class="media-body">
+                                                    <h4 class="media-heading">{{$comment->users()->first()->name}}</h4>
+                                                    <p>{{$comment->content}}</p>
+                                                </div>
+                                            </div>
+                                            <hr>
                                         @endforeach
                                     </div>
                                     <div class="tab-pane fade" id="nav-profile-{{$key}}" role="tabpanel"
