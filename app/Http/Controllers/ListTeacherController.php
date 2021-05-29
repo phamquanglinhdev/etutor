@@ -30,8 +30,8 @@ class ListTeacherController extends Controller
                     $data[$key]['id']=$teacher->users()->first()->id;
                     $data[$key]['name'] = $teacher->users()->first()->name;
                     $data[$key]['avatar'] = $teacher->users()->first()->avatar;
-                    $data[$key]['level'] = $teacher->users()->first()->level;
-                    $data[$key]['table'] = $teacher->users()->first()->teaching;
+                    $data[$key]['level'] = $teacher->level;
+                    $data[$key]['table'] = $teacher->teaching;
                 }
             }
         }

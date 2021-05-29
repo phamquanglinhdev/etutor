@@ -45,7 +45,7 @@
                                     <b>{{$data[$key]['name']}}</b>
                                 </div>
                                 <div class="w-100">
-                                    {{$data[$key]['level']}}
+                                    {!! $data[$key]['level']!!}
                                 </div>
                             </div>
                         </div>
