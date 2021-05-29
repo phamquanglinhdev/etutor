@@ -66,7 +66,13 @@
                                 <div class="tab-content" id="nav-tabContent">
                                     <div class="tab-pane fade show active" id="nav-home-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-home-tab">
-                                        TAV
+                                        @php
+                                            $comments = \App\Models\Comment::where('teacher_id','=',$id)->orderBy('updated_at','DESC')->get();
+                                        @endphp
+                                        @foreach($comments as $comment)
+                                            <img src="{{$comment->user()->first()->avatar}}" class="w-100">
+                                            <span>{{$comment->content}}</span>
+                                        @endforeach
                                     </div>
                                     <div class="tab-pane fade" id="nav-profile-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-profile-tab">
