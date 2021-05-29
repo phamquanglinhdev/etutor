@@ -78,6 +78,7 @@
             if($(this).html() != "&nbsp;"){
                 $(this).addClass("text-origin")
                 $(this).addClass("bg-origin")
+                $(this).html("Hav")
 
             }
         });
