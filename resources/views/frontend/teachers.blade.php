@@ -70,7 +70,7 @@
                                             $comments = \App\Models\Comment::where('teacher_id','=',$data[$key]['id'])->orderBy('updated_at','DESC')->get();
                                         @endphp
                                         @foreach($comments as $comment)
-                                            <img src="{{$comment->user()->first()->avatar}}" class="w-100">
+                                            <img src="{{$comment->users()->first()->avatar}}" class="w-100">
                                             <span>{{$comment->content}}</span>
                                         @endforeach
                                     </div>
