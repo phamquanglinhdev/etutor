@@ -51,13 +51,13 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
                                            href="#nav-home-{{$key}}" role="tab" aria-controls="nav-home-{{$key}}"
-                                           aria-selected="true">Home</a>
+                                           aria-selected="true">Đánh giá chung
                                         <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
                                            href="#nav-profile-{{$key}}" role="tab" aria-controls="nav-profile-{{$key}}"
                                            aria-selected="false">Lịch dạy</a>
                                         <a class="nav-item nav-link" id="nav-contact-tab" data-toggle="tab"
                                            href="#nav-contact-{{$key}}" role="tab" aria-controls="nav-contact-{{$key}}"
-                                           aria-selected="false">Tôi muốn học</a>
+                                           aria-selected="false">Video dạy mẫu</a>
                                     </div>
                                 </nav>
                                 <div class="tab-content" id="nav-tabContent">
@@ -71,7 +71,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-contact-tab">
-                                        <iframe width="1280" height="640"
+                                        <iframe width="100%" height="100%"
                                                 src="https://www.youtube.com/embed/7Q1I5nuBa6w"
                                                 title="YouTube video player" frameborder="0"
                                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
