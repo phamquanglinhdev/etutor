@@ -17,8 +17,8 @@ class CreateProlivesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('user_id');
             $table->longText('level')->nullable();
-            $table->integer('national')->nullable();
-            $table->longText('teaching')->nullable();
+            $table->longText('celendar')->nullable();
+            $table->longText('video')->nullable();
             $table->timestamps();
             $table->foreign('user_id')->references('id')->on('users');
         });
