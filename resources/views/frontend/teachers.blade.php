@@ -177,7 +177,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-contact-tab">
-                                        {{$data[$key]['video']}}
+                                        {!! $data[$key]['video'] !!}
                                     </div>
                                 </div>
                             </div>
@@ -216,5 +216,9 @@
             unchecked_ico: '{{asset('asset//nicelabel/ico/tick-unchecked.png')}}',
 
         });
+    </script>
+    <script>
+        $('iframe')[0].width ="100%";
+        $('iframe')[0].height ="250px";
     </script>
 @endsection

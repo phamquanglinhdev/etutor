@@ -18,5 +18,26 @@ class OptionSeeder extends Seeder
             ];
             Option::create($option);
         }
+        $vn=[
+            'id'=>10001,
+            'name'=>'GV Việt Nam',
+            'type'=>2
+        ];
+        Option::create($vn);
+
+        $pl=[
+            'id'=>10002,
+            'name'=>'GV Philippine',
+            'type'=>2
+        ];
+        Option::create($pl);
+
+        $us=[
+            'id'=>10003,
+            'name'=>'GV Bản xứ',
+            'type'=>2
+        ];
+        Option::create($us);
+
     }
 }

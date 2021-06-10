@@ -44,4 +44,4 @@ Route::post('/',[\App\Http\Controllers\SaveCustomerController::class,'save'])->n
 Route::post('/teacher/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'save'])->name('save.comment');
 Route::get('/teacher/{teacher}/delete/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'delete',['teacher','id']])->where(['teacher','id'])->name('delete.comment');
 Route::get('page/{type}',[\App\Http\Controllers\FrontendPageController::class,'getData','type'])->where(['data'])->name('page');
-Route::post('/teachers/',[\App\Http\Controllers\Filter::class,'index'])->name('filter');
+Route::any('/teachers/',[\App\Http\Controllers\Filter::class,'index'])->name('filter');
