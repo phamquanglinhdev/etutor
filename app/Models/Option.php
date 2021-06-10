@@ -5,7 +5,7 @@ namespace App\Models;
 use Backpack\CRUD\app\Models\Traits\CrudTrait;
 use Illuminate\Database\Eloquent\Model;
 
-class Prolife extends Model
+class Option extends Model
 {
     use CrudTrait;
 
@@ -15,7 +15,7 @@ class Prolife extends Model
     |--------------------------------------------------------------------------
     */
 
-    protected $table = 'prolives';
+    protected $table = 'options';
     // protected $primaryKey = 'id';
     // public $timestamps = false;
     protected $guarded = ['id'];
@@ -34,19 +34,13 @@ class Prolife extends Model
     | RELATIONS
     |--------------------------------------------------------------------------
     */
-    public function users()
-    {
-        return $this->belongsTo(User::class, 'user_id', 'id');
-    }
+
     /*
     |--------------------------------------------------------------------------
     | SCOPES
     |--------------------------------------------------------------------------
     */
-    public function options()
-    {
-        return $this->belongsToMany(Option::class, 'option_teacher', 'teacher_id', 'option_id');
-    }
+
     /*
     |--------------------------------------------------------------------------
     | ACCESSORS

@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Admin;
 
 use App\Http\Requests\ProlifeRequest;
+use App\Models\Option;
 use App\Models\Prolife;
 use Backpack\CRUD\app\Http\Controllers\CrudController;
 use Backpack\CRUD\app\Library\CrudPanel\CrudPanelFacade as CRUD;
@@ -40,7 +41,17 @@ class ProlifeCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        $this->crud->addClause('where', 'user_id', '=', backpack_user()->id);
+        if(backpack_user()->role==1){
+            $this->crud->addClause('where', 'user_id', '=', backpack_user()->id);
+        }else{
+            $this->crud->addColumn([
+                'name' => 'user_id',
+                'type' => 'select',
+                'label' => 'Giảng viên',
+                'model' => "App\Models\User",
+                'attribute' => 'name',
+                'entity' => 'users']);
+        }
         $request = Prolife::where('user_id','=',backpack_user()->id)->first();
         if(isset($request)){
             $this->crud->denyAccess('create');
@@ -56,6 +67,16 @@ class ProlifeCrudController extends CrudController
                 'label' => 'Type',
                 'type'=>'select_from_array',
                 'options'=>['Giáo viên Việt Nam','Giáo viên Philipines','Giáo viên bản ngữ']
+            ]);
+            $this->crud->addColumn([
+                // any type of relationship
+                'name'         => 'options', // name of relationship method in the model
+                'type'         => 'relationship',
+                'label'        => 'Tag Giáo Viên', // Table column heading
+                // OPTIONAL
+                'entity'    => 'options', // the method that defines the relationship in your Model
+                'attribute' => 'name',
+                'model'     => Option::class, // foreign key model
             ]);
         }
 
@@ -83,6 +104,16 @@ class ProlifeCrudController extends CrudController
             'label' => 'Type',
             'type'=>'select_from_array',
             'options'=>['Giáo viên Việt Nam','Giáo viên Philipines','Giáo viên bản ngữ']
+        ]);
+        $this->crud->addField([
+            // any type of relationship
+            'name'         => 'options', // name of relationship method in the model
+            'type'         => 'relationship',
+            'label'        => 'Tag Giáo Viên', // Table column heading
+            // OPTIONAL
+            'entity'    => 'options', // the method that defines the relationship in your Model
+            'attribute' => 'name',
+            'model'     => Option::class, // foreign key model
         ]);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
