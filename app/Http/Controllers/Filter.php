@@ -36,7 +36,7 @@ class Filter extends Controller
         $sub =0;
         $active=0;
         foreach ($data as $value) {
-            if ((integer)$value > 9999) {
+            if ((integer)$value > 9998) {
                 $main ++;
                 if (in_array($value, $options)) {
                     $mainType ++;
@@ -68,7 +68,8 @@ class Filter extends Controller
             $data[$key]['name'] = $prolife->users()->first()->name;
             $data[$key]['avatar'] = $prolife->users()->first()->avatar;
             $data[$key]['level'] = $prolife->level;
-            $data[$key]['table'] = $prolife->teaching;
+            $data[$key]['table'] = $prolife->celendar;
+            $data[$key]['video'] = $prolife->video;
             $data[$key]['options'] = $prolife->options()->get();
         }
         return view('frontend.teachers', ['data' => $data, 'title' => 'Lọc giáo viên']);

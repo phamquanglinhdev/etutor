@@ -31,7 +31,8 @@ class ListTeacherController extends Controller
                     $data[$key]['name'] = $teacher->users()->first()->name;
                     $data[$key]['avatar'] = $teacher->users()->first()->avatar;
                     $data[$key]['level'] = $teacher->level;
-                    $data[$key]['table'] = $teacher->teaching;
+                    $data[$key]['table'] = $teacher->celendar;
+                    $data[$key]['video'] = $teacher->video;
                     $data[$key]['options']=$teacher->options()->get();
                 }
             }

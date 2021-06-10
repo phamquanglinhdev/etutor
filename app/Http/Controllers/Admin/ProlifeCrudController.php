@@ -62,12 +62,7 @@ class ProlifeCrudController extends CrudController
                 'model' => "App\Models\User",
                 'attribute' => 'name',
                 'entity' => 'users']);
-            CRUD::addColumn([
-                'name' => 'national',
-                'label' => 'Type',
-                'type'=>'select_from_array',
-                'options'=>['Giáo viên Việt Nam','Giáo viên Philipines','Giáo viên bản ngữ']
-            ]);
+
             $this->crud->addColumn([
                 // any type of relationship
                 'name'         => 'options', // name of relationship method in the model
@@ -98,13 +93,7 @@ class ProlifeCrudController extends CrudController
         CRUD::setValidation(ProlifeRequest::class);
         CRUD::addField(['name' => 'user_id', 'type' => 'hidden','default'=>backpack_user()->id]);
         CRUD::addField(['name' => 'level', 'type' => 'ckeditor','label'=>'Trình độ (nhập theo từng dòng)']);
-        CRUD::addField(['name' => 'teaching', 'type' => 'ckeditor','label'=>'Lịch dạy (Nhập theo dòng hoặc tự tạo bảng)']);
-        CRUD::addField([
-            'name' => 'national',
-            'label' => 'Type',
-            'type'=>'select_from_array',
-            'options'=>['Giáo viên Việt Nam','Giáo viên Philipines','Giáo viên bản ngữ']
-        ]);
+        CRUD::addField(['name' => 'celendar', 'type' => 'ckeditor','label'=>'Lịch dạy (Nhập theo dòng hoặc tự tạo bảng)']);
         $this->crud->addField([
             // any type of relationship
             'name'         => 'options', // name of relationship method in the model
@@ -115,6 +104,7 @@ class ProlifeCrudController extends CrudController
             'attribute' => 'name',
             'model'     => Option::class, // foreign key model
         ]);
+        CRUD::addField(['name' => 'video', 'type' => 'text','label'=>'Mã nhúng video dạy thử']);
         /**
          * Fields can be defined using the fluent syntax or array syntax:
          * - CRUD::field('price')->type('number');

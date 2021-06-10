@@ -140,7 +140,7 @@
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
                                         <a class="nav-item nav-link active" id="nav-home-tab" data-toggle="tab"
                                            href="#nav-home-{{$key}}" role="tab" aria-controls="nav-home-{{$key}}"
-                                           aria-selected="true">Đánh giá chung
+                                           aria-selected="true">Đánh giá chung</a>
                                             <a class="nav-item nav-link" id="nav-profile-tab" data-toggle="tab"
                                                href="#nav-profile-{{$key}}" role="tab"
                                                aria-controls="nav-profile-{{$key}}"
@@ -177,11 +177,7 @@
                                     </div>
                                     <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-contact-tab">
-                                        <iframe width="100%" height="100%"
-                                                src="https://www.youtube.com/embed/7Q1I5nuBa6w"
-                                                title="YouTube video player" frameborder="0"
-                                                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-                                                allowfullscreen></iframe>
+                                        {{$data[$key]['video']}}
                                     </div>
                                 </div>
                             </div>

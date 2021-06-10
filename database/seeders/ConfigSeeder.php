@@ -12,7 +12,7 @@ class ConfigSeeder extends Seeder
 {
     public function run(){
         $config=[
-            'hot_mail'=>'admin@bizenglish.com',
+            'host_mail'=>'admin@bizenglish.com',
             'host_phone'=>'00000000000',
             'description'=>'Bizenglish for success',
             'keyword'=>'bizenglish,tieng anh,hoc tieng anh',
