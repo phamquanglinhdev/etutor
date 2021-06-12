@@ -92,8 +92,11 @@ class ProlifeCrudController extends CrudController
     {
         CRUD::setValidation(ProlifeRequest::class);
         CRUD::addField(['name' => 'user_id', 'type' => 'hidden','default'=>backpack_user()->id]);
+        CRUD::addField(['name' => 'price', 'type' => 'number','label'=>'Học phí / Giờ']);
+        CRUD::addField(['name' => 'description', 'type' => 'ckeditor','label'=>'Giới thiệu ngắn']);
         CRUD::addField(['name' => 'level', 'type' => 'ckeditor','label'=>'Trình độ (nhập theo từng dòng)']);
         CRUD::addField(['name' => 'celendar', 'type' => 'ckeditor','label'=>'Lịch dạy (Nhập theo dòng hoặc tự tạo bảng)']);
+        CRUD::addField(['name' => 'salary', 'type' => 'ckeditor','label'=>'Bảng học phí']);
         $this->crud->addField([
             // any type of relationship
             'name'         => 'options', // name of relationship method in the model

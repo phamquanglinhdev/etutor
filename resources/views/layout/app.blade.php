@@ -92,21 +92,6 @@
                         <a class="nav-link text-white dropdown-toggle" href="http://example.com"
                            id="navbarDropdownMenuLink"
                            data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Giáo viên
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>0])}}">Giáo viên Việt Nam</a>
-                            </li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>1])}}">Giáo viên
-                                    Philipines</a></li>
-                            <li><a class="dropdown-item" href="{{route('teachers',['type'=>2])}}">Giáo viên bản ngữ</a>
-                            </li>
-                        </ul>
-                    </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link text-white dropdown-toggle" href="http://example.com"
-                           id="navbarDropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                             Chia sẻ kinh nghiệm
                         </a>
                         <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">

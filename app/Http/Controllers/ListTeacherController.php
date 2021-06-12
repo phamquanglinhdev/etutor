@@ -27,9 +27,10 @@ class ListTeacherController extends Controller
             $data[$key]['id'] = $prolife->users()->first()->id;
             $data[$key]['name'] = $prolife->users()->first()->name;
             $data[$key]['avatar'] = $prolife->users()->first()->avatar;
-            $data[$key]['level'] = $prolife->level;
+            $data[$key]['level'] = $prolife->description;
             $data[$key]['table'] = $prolife->celendar;
             $data[$key]['video'] = $prolife->video;
+            $data[$key]['price'] = $prolife->price;
             $data[$key]['options'] = $prolife->options()->get();
         }
         return view('frontend.teachers', ['data' => $data, 'title' => $title]);

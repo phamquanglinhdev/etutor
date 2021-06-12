@@ -139,40 +139,15 @@
                 </div>
             </div>
             <div class="row pt-5">
-                <div class="col-12 pt-5 text-uppercase h2 text-center">GIÁO VIÊN CỦA CHÚNG TÔI</div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
-                    <div class="p-3 ">
-                        <a href="{{route('teachers',['type'=>0])}}"
-                           class="link-style-none text-white">
-                            <img src="{{asset('uploads/teacher-vn.png')}}" class="pb-2 w-100">
-                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
-                            <p>Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh tại Mỹ - Châu Âu.</p>
-                        </a>
-                    </div>
-                    <a href="{{route('teachers',['type'=>0])}}" class="btn btn-origin">Xem chi tiết</a>
+                <div class="col-12 pt-5 text-uppercase h2 text-center">Tìm kiếm giáo viên</div>
+                <div class="col-12 pt-5 text-uppercase text-center">Bạn có thể tìm kiếm giáo viên phù hợp với nhu cầu ,
+                    học phí ,..
                 </div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
-                    <div class="p-3">
-                        <a href="{{route('teachers',['type'=>1])}}"
-                           class="link-style-none text-white">
-                            <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">
-                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
-                            <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên
-                                toàn thế giới.</p>
-                        </a>
-                    </div>
-                    <a href="{{route('teachers',['type'=>1])}}" class="btn btn-origin">Xem chi tiết</a>
-                </div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
-                    <div class="p-3 ">
-                        <a href="{{route('teachers',['type'=>2])}}"
-                           class="link-style-none text-white">
-                            <img src="{{asset('uploads/teacher-bn.png')}}" class="pb-2 w-100">
-                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Bản Ngữ</b></p>
-                            <p>Giáo viên Mỹ - Châu Âu – Úc – Nam Phi là những nước tiếng Anh là ngôn ngữ chính.</p>
-                        </a>
-                    </div>
-                    <a href="{{route('teachers',['type'=>2])}}" class="btn btn-origin">Xem chi tiết</a>
+                <div class="p-5 d-flex w-100 align-items-center justify-content-center">
+                    <button class="btn btn-origin "><a class="link-style-none text-white"
+                                                                          href="{{route('filter')}}"><i
+                            class="fas fa-search"></i> Tìm kiếm ngay</a>
+                    </button>
                 </div>
             </div>
         </div>
@@ -184,25 +159,25 @@
         @endphp
         @if(isset($comments))
             <div style="overflow-y: scroll;max-height: 500px">
-            @foreach($comments as $comment)
-                @if(isset($comment->users()->first()->name))
-                <div class="media row m-0 px-3 bg-light mt-2 ">
-                    <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
-                        <img
-                             style="width: 120px;"
-                             src="{{$comment->users()->first()->avatar}}"
-                             alt="Generic placeholder image ">
-                    </div>
-                    <div class="media-body col-sm-10 col-12 ">
-                        <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
-                        <div class="font-italic h6">{{$comment->content}}</div>
-                        @for($i=1;$i<=$comment->rate;$i++)
-                            <i class="fas fa-star text-warning mr-1"></i>
-                        @endfor
-                    </div>
-                </div>
-                @endif
-            @endforeach
+                @foreach($comments as $comment)
+                    @if(isset($comment->users()->first()->name))
+                        <div class="media row m-0 px-3 bg-light mt-2 ">
+                            <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
+                                <img
+                                    style="width: 120px;"
+                                    src="{{$comment->users()->first()->avatar}}"
+                                    alt="Generic placeholder image ">
+                            </div>
+                            <div class="media-body col-sm-10 col-12 ">
+                                <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
+                                <div class="font-italic h6">{{$comment->content}}</div>
+                                @for($i=1;$i<=$comment->rate;$i++)
+                                    <i class="fas fa-star text-warning mr-1"></i>
+                                @endfor
+                            </div>
+                        </div>
+                    @endif
+                @endforeach
             </div>
         @endif
         @if(backpack_auth()->check())
@@ -225,7 +200,8 @@
                         <input type="radio" id="star1" name="rate" value="1"/>
                         <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
                         <div class="mt-2">
-                            <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn" required></textarea>
+                            <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn"
+                                      required></textarea>
                         </div>
                         <div class="text-right pt-2">
                             <button class="btn btn-origin pointed" type="submit">Gửi</button>
@@ -234,7 +210,7 @@
                 </div>
             </div>
         @else
-            <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá </div>
+            <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá</div>
         @endif
     </div>
     <div class="container-fluid bg-dark text-white p-5 mb-5">

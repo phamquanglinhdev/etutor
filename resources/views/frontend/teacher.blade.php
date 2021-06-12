@@ -9,7 +9,7 @@
 @section('content')
     @if(isset($teacher) && $teacher->role==1 && isset($prolife))
         @php
-            $title ='Giảng viên '.$teacher->name;
+            $title ='Giáo viên '.$teacher->name;
         @endphp
         <link rel="stylesheet" href="{{asset('asset/css/teacher.css')}}">
         <div class="text-dark">
@@ -19,7 +19,7 @@
                         <div class="d-none col-md-3 d-lg-block">
                             <img src="{{$teacher->avatar}}" class="img-fluid">
                         </div>
-                        <div class="h1 col-md-9">Giảng Viên : {{$teacher->name}}</div>
+                        <div class="h1 col-md-9">Giáo Viên : {{$teacher->name}}</div>
                     </div>
                 </div>
             </div>
@@ -29,7 +29,11 @@
                     <div>{!! $prolife->level !!}</div>
                     <div class="h4"><i class="fas fa-clock"></i> Thời gian nhận lớp</div>
                     <div class="teaching" id="teaching">
-                        {!! $prolife->teaching !!}
+                        {!! $prolife->celendar !!}
+                    </div>
+                    <div class="h4 py-3"><i class="fas fa-money-bill-wave"></i></i> Học phí</div>
+                    <div class="salary">
+                        {!! $prolife->salary !!}
                     </div>
                 </div>
             </div>
@@ -162,25 +166,14 @@
 
         }
 
-        #teaching::-webkit-scrollbar {
-            width: 6px;
-            background-color: white;
-        }
-
-        #teaching::-webkit-scrollbar-thumb {
-            background-color: white;
-        }
-
-        .teaching {
-            overflow-x: scroll
-        }
-
-        .teaching td {
+        .teaching td,.teaching th {
             padding: 5px;
-            border: 4px solid white;
+            text-align: center;
+            width: 100px;
         }
 
         .teaching table {
+            margin-top:30px ;
             min-width: 100% !important;
 
         }
@@ -194,5 +187,24 @@
                 100deg, #844646, transparent);
             background-size: cover;
         }
+        .salary th{
+            width: 150px;
+            text-align: center;
+        }
+        .salary table{
+            width: 100%!important;
+        }
+        .salary td{
+            text-align: center;
+        }
+        .salary td:nth-child(4){
+            width: 500px;
+            padding: 5px;
+            text-align: left;
+        }
     </style>
+    <script>
+        // $('.salary td')[2].width="500px";
+        // $('.salary td')[2].css("padding","5px");
+    </script>
 @endsection
