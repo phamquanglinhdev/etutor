@@ -57,26 +57,31 @@
                             ngày?
                         </button>
                         <div class="collapse" id="collapseExample">
+                            <div class="row">
                             @foreach($filters as $option)
                                 @if($option->type==3)
-                                    <div class="">
-                                        <input class="text-nicelabel"
+                                    <div class="col-md-4">
+                                        <div class="font-weight-bold text-center">{{$option->name}}</div>
+                                        <input class="circle-nicelabel"
                                                type="checkbox"
                                                data-nicelabel='{"checked_text": "{{$option->name}}", "unchecked_text": "{{$option->name}}"}'
                                                value="{{$option->id}}" name="data-teach-{{$option->id}}">
                                     </div>
                                 @endif
                             @endforeach
+                            </div>
                             <div class="row">
                                 @for($w=2;$w<=7;$w++)
-                                    <div class=" col-md-3">
-                                        <input class="text-nicelabel" name="999{{$w}}" value="999{{$w}}"
+                                    <div class=" col-md-4">
+                                        <div class="font-weight-bold pt-3 text-center">Thứ {{$w}}</div>
+                                        <input class="circle-nicelabel" name="999{{$w}}" value="999{{$w}}"
                                                data-nicelabel='{"checked_text": "Thứ {{$w}}", "unchecked_text": "Thứ {{$w}}"}'
                                                type="checkbox">
                                     </div>
                                 @endfor
-                                <div class=" col-md-3">
-                                    <input class="text-nicelabel" name="9998" value="999{{$w}}"
+                                <div class=" col-12">
+                                    <div class="font-weight-bold pt-3 text-left">Chù nhật</div>
+                                    <input class="circle-nicelabel" name="9998" value="999{{$w}}"
                                            data-nicelabel='{"checked_text": "Chủ nhật", "unchecked_text": "Chủ nhật"}'
                                            type="checkbox">
                                 </div>
