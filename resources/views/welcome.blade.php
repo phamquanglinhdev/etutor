@@ -139,9 +139,42 @@
                 </div>
             </div>
             <div class="row pt-5">
+                <div class="col-12 pt-5 text-uppercase h2 text-center">GIÁO VIÊN CỦA CHÚNG TÔI</div>
+                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
+                    <div class="p-3 ">
+                        <a href="{{route('teachers',['type'=>0])}}"
+                           class="link-style-none text-white">
+                            <img src="{{asset('uploads/teacher-vn.png')}}" class="pb-2 w-100">
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
+                            <p>Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh tại Mỹ - Châu Âu.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
+                    <div class="p-3">
+                        <a href="{{route('teachers',['type'=>1])}}"
+                           class="link-style-none text-white">
+                            <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
+                            <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên
+                                toàn thế giới.</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 tran-shadow">
+                    <div class="p-3 ">
+                        <a href="{{route('teachers',['type'=>2])}}"
+                           class="link-style-none text-white">
+                            <img src="{{asset('uploads/teacher-bn.png')}}" class="pb-2 w-100">
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Bản Ngữ</b></p>
+                            <p>Giáo viên Mỹ - Châu Âu – Úc – Nam Phi là những nước tiếng Anh là ngôn ngữ chính.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+            <div class="row">
                 <div class="col-12 pt-5 text-uppercase h2 text-center">Tìm kiếm giáo viên</div>
-                <div class="col-12 pt-5 text-uppercase text-center">Bạn có thể tìm kiếm giáo viên phù hợp với nhu cầu ,
-                    học phí ,..
+                <div class="col-12 pt-5 text-uppercase text-center">Bạn có thể tìm kiếm giáo viên phù hợp nhất với bạn về khóa học, mức chi phí và thời gian học.
                 </div>
                 <div class="p-5 d-flex w-100 align-items-center justify-content-center">
                     <button class="btn btn-origin "><a class="link-style-none text-white"

@@ -152,23 +152,23 @@
                             Văn phòng giao dịch Hà Nội:<br>
                             Phòng 08, tầng 38, Tòa HH3B khu đô thị Linh Đàm, quận Hoàng Mai, Hà Nội.
                         </div>
-                        <div><i class="fas fa-building"></i>
-                            Văn phòng giao dịch Đà Nẵng:<br>
-                            Số 80 Trần Văn Dư, quận Ngũ Hành Sơn, Tp Đà Nẵng.
-                        </div>
+{{--                        <div><i class="fas fa-building"></i>--}}
+{{--                            Văn phòng giao dịch Đà Nẵng:<br>--}}
+{{--                            Số 80 Trần Văn Dư, quận Ngũ Hành Sơn, Tp Đà Nẵng.--}}
+{{--                        </div>--}}
                     </div>
                 </div>
 
                 <div class="col-xs-6 col-md-3">
                     <h6>Thông tin BizEnglish</h6>
                     <ul class="footer-links">
+                        <li><a href="{{route('index')}}#study-regester">Cách thức học</a></li>
                         <li><a href="{{route('page',['type'=>'faq'])}}">Câu hỏi thường gặp</a></li>
                         <li><a href="{{route('page',['type'=>'payment'])}}">Học phí và cách thanh toán</a>
                         </li>
                         <li><a href="{{route('page',['type'=>'be_teacher'])}}">Trở thành giáo viên</a>
                         </li>
                         <li><a href="{{route('page',['type'=>'be_client'])}}">Trờ thành đối tác của BizEnglish</a></li>
-                        <li><a href="{{route('index')}}#study-regester">Đăng ký học thử</a></li>
                     </ul>
                 </div>
 
