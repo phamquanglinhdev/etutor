@@ -19,6 +19,7 @@ class CreatePagesTable extends Migration
             $table->longText('payment')->nullable();
             $table->longText('be_teacher')->nullable();
             $table->longText('be_client')->nullable();
+            $table->longText('how_learn')->nullable();
             $table->timestamps();
         });
     }

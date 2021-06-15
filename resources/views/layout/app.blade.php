@@ -162,7 +162,7 @@
                 <div class="col-xs-6 col-md-3">
                     <h6>Thông tin BizEnglish</h6>
                     <ul class="footer-links">
-                        <li><a href="{{route('index')}}#study-regester">Cách thức học</a></li>
+                        <li><a href="{{route('page',['type'=>'how_learn'])}}#study-regester">Cách thức học</a></li>
                         <li><a href="{{route('page',['type'=>'faq'])}}">Câu hỏi thường gặp</a></li>
                         <li><a href="{{route('page',['type'=>'payment'])}}">Học phí và cách thanh toán</a>
                         </li>

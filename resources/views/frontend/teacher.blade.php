@@ -12,6 +12,7 @@
             $title ='Giáo viên '.$teacher->name;
         @endphp
         <link rel="stylesheet" href="{{asset('asset/css/teacher.css')}}">
+
         <div class="text-dark">
             <div class="bg-thumbnail">
                 <div class="container py-5 text-white">
@@ -38,7 +39,6 @@
                 </div>
             </div>
         </div>
-        {{--        Result--}}
         <div class="container">
             <div class="text-center text-origin py-5 h1">Đánh giá</div>
             @php

@@ -61,7 +61,7 @@ class PageCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(PageRequest::class);
-
+        $this->crud->addField(['name'=>'how_learn','label'=>'Cách thức học','type'=>'ckeditor']);
         $this->crud->addField(['name'=>'faq','label'=>'Câu hỏi thường gặp','type'=>'ckeditor']);
         $this->crud->addField(['name'=>'payment','label'=>'Học phí và thanh toán','type'=>'ckeditor']);
         $this->crud->addField(['name'=>'be_teacher','label'=>'Trở thành giáo viên','type'=>'ckeditor']);

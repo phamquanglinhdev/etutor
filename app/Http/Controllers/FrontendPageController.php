@@ -13,6 +13,10 @@ class FrontendPageController extends Controller
         $data=null;
         $title=null;
         switch ($type) {
+            case 'how_learn':
+                $data=$page->how_learn;
+                $title='Cách thức học';
+                break;
             case 'faq':
                 $data=$page->faq;
                 $title='Câu hỏi thường gặp';
