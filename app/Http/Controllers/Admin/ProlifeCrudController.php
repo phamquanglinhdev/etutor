@@ -90,13 +90,92 @@ class ProlifeCrudController extends CrudController
      */
     protected function setupCreateOperation()
     {
+        $celendar='<table border="1" cellpadding="0" cellspacing="0" style="width:100%">
+	<tbody>
+		<tr>
+			<td>&nbsp;</td>
+			<td>Monday</td>
+			<td>Tueday</td>
+			<td>Wednesday</td>
+			<td>Thursday</td>
+			<td>Friday</td>
+			<td>Satuday</td>
+			<td>Sunday</td>
+		</tr>
+		<tr>
+			<td>S&aacute;ng</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Chiều</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<td>Tối</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>
+            ';
+        $table='<table id="salary" border="1" cellpadding="0" cellspacing="0" style="width:500px">
+	<thead>
+		<tr>
+			<th scope="row">Số giờ đăng k&yacute;</th>
+			<th scope="col">Học ph&iacute;/Giờ</th>
+			<th scope="col">Tổng học ph&iacute;</th>
+			<th class="sub" scope="col">Ghi ch&uacute;</th>
+		</tr>
+	</thead>
+	<tbody>
+		<tr>
+			<th scope="row">&nbsp;</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td rowspan="3">&nbsp;</td>
+		</tr>
+		<tr>
+			<th scope="row">&nbsp;</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+
+		</tr>
+		<tr>
+			<th scope="row">&nbsp;</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+
+		</tr>
+	</tbody>
+</table>
+
+<p>&nbsp;</p>';
         CRUD::setValidation(ProlifeRequest::class);
         CRUD::addField(['name' => 'user_id', 'type' => 'hidden','default'=>backpack_user()->id]);
         CRUD::addField(['name' => 'price', 'type' => 'number','label'=>'Học phí / Giờ']);
         CRUD::addField(['name' => 'description', 'type' => 'ckeditor','label'=>'Giới thiệu ngắn']);
         CRUD::addField(['name' => 'level', 'type' => 'ckeditor','label'=>'Trình độ (nhập theo từng dòng)']);
-        CRUD::addField(['name' => 'celendar', 'type' => 'ckeditor','label'=>'Lịch dạy (Nhập theo dòng hoặc tự tạo bảng)']);
-        CRUD::addField(['name' => 'salary', 'type' => 'ckeditor','label'=>'Bảng học phí']);
+        CRUD::addField(['name' => 'celendar', 'type' => 'ckeditor','label'=>'Lịch dạy (Nhập theo dòng hoặc tự tạo bảng)','value'=>$celendar]);
+        CRUD::addField(['name' => 'salary', 'type' => 'ckeditor','label'=>'Bảng học phí','value'=>$table]);
         $this->crud->addField([
             // any type of relationship
             'name'         => 'options', // name of relationship method in the model
