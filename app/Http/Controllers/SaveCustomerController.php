@@ -16,7 +16,7 @@ class SaveCustomerController extends Controller
        ];
        Customer::create($data);
        echo "<script>Đã gửi lời nhắn của bạn</script>";
-       return redirect('/');
+       return redirect()->back()->with('status','Đã gửi yêu cầu tư vấn thành công');
 
    }
 }
