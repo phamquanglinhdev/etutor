@@ -94,26 +94,16 @@ class ProlifeCrudController extends CrudController
 	<tbody>
 		<tr>
 			<td>&nbsp;</td>
-			<td>Monday</td>
-			<td>Tueday</td>
-			<td>Wednesday</td>
-			<td>Thursday</td>
-			<td>Friday</td>
-			<td>Satuday</td>
-			<td>Sunday</td>
+			<th>Mon</th>
+			<th>Tue</th>
+			<th>Wed</th>
+			<th>Thu</th>
+			<th>Fri</th>
+			<th>Sat</th>
+			<th>Sub</th>
 		</tr>
 		<tr>
-			<td>S&aacute;ng</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-			<td>&nbsp;</td>
-		</tr>
-		<tr>
-			<td>Chiều</td>
+			<td>Mor</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
@@ -123,7 +113,17 @@ class ProlifeCrudController extends CrudController
 			<td>&nbsp;</td>
 		</tr>
 		<tr>
-			<td>Tối</td>
+			<th>Atf</th>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+			<td>&nbsp;</td>
+		</tr>
+		<tr>
+			<th>Eve</th>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
 			<td>&nbsp;</td>
