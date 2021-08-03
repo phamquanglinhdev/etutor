@@ -13,7 +13,7 @@
                             $filters = \App\Models\Option::get();
                         @endphp
                         @for($i=0;$i<3;$i++)
-                            <div class="col-md-3 col-sm-6 col-12 ">
+                            <div class="col-md-4 col-sm-12 col-12 ">
                                 @if($i==0)
                                     <button class="btn btn-origin my-2 w-100 px-0" type="button" data-toggle="collapse"
                                             data-target="#toggle-{{$i}}" aria-expanded="false"
@@ -51,43 +51,43 @@
                                 </div>
                             </div>
                         @endfor
-                        <div class="col-md-3 col-sm-6 col-12 ">
-                            <button class="btn btn-origin my-2 w-100 px-0" type="button" data-toggle="collapse"
-                                    data-target="#collapseExample" aria-expanded="false"
-                                    aria-controls="collapseExample">
-                                Thời gian có thể học
-                            </button>
-                            <div class="collapse" id="collapseExample">
-                                <div class="py-2">Giờ trong ngày</div>
-                                <div class="row m-0">
-                                    @foreach($filters as $option)
-                                        @if($option->type==3)
-                                            <div class="col-md-4 m-0 p-0 rounded-0">
-                                                <input class="text-nicelabel"
-                                                       type="checkbox"
-                                                       data-nicelabel='{"checked_text": "{{$option->name}}", "unchecked_text": "{{$option->name}}"}'
-                                                       value="{{$option->id}}" name="data-teach-{{$option->id}}">
-                                            </div>
-                                        @endif
-                                    @endforeach
-                                </div>
-                                <div class="py-2">Ngày trong tuần</div>
-                                <div class="row m-0">
-                                    @for($w=2;$w<=7;$w++)
-                                        <div class=" col-md-4 m-0 p-0">
-                                            <input class="text-nicelabel" name="999{{$w}}" value="999{{$w}}"
-                                                   data-nicelabel='{"checked_text": "Thứ {{$w}}", "unchecked_text": "Thứ {{$w}}"}'
-                                                   type="checkbox">
-                                        </div>
-                                    @endfor
-                                    <div class=" col-12 m-0 p-0">
-                                        <input class="text-nicelabel" name="9998" value="999{{$w}}"
-                                               data-nicelabel='{"checked_text": "Chủ nhật", "unchecked_text": "Chủ nhật"}'
-                                               type="checkbox">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+{{--                        <div class="col-md-3 col-sm-6 col-12 ">--}}
+{{--                            <button class="btn btn-origin my-2 w-100 px-0" type="button" data-toggle="collapse"--}}
+{{--                                    data-target="#collapseExample" aria-expanded="false"--}}
+{{--                                    aria-controls="collapseExample">--}}
+{{--                                Thời gian có thể học--}}
+{{--                            </button>--}}
+{{--                            <div class="collapse" id="collapseExample">--}}
+{{--                                <div class="py-2">Giờ trong ngày</div>--}}
+{{--                                <div class="row m-0">--}}
+{{--                                    @foreach($filters as $option)--}}
+{{--                                        @if($option->type==3)--}}
+{{--                                            <div class="col-md-4 m-0 p-0 rounded-0">--}}
+{{--                                                <input class="text-nicelabel"--}}
+{{--                                                       type="checkbox"--}}
+{{--                                                       data-nicelabel='{"checked_text": "{{$option->name}}", "unchecked_text": "{{$option->name}}"}'--}}
+{{--                                                       value="{{$option->id}}" name="data-teach-{{$option->id}}">--}}
+{{--                                            </div>--}}
+{{--                                        @endif--}}
+{{--                                    @endforeach--}}
+{{--                                </div>--}}
+{{--                                <div class="py-2">Ngày trong tuần</div>--}}
+{{--                                <div class="row m-0">--}}
+{{--                                    @for($w=2;$w<=7;$w++)--}}
+{{--                                        <div class=" col-md-4 m-0 p-0">--}}
+{{--                                            <input class="text-nicelabel" name="999{{$w}}" value="999{{$w}}"--}}
+{{--                                                   data-nicelabel='{"checked_text": "Thứ {{$w}}", "unchecked_text": "Thứ {{$w}}"}'--}}
+{{--                                                   type="checkbox">--}}
+{{--                                        </div>--}}
+{{--                                    @endfor--}}
+{{--                                    <div class=" col-12 m-0 p-0">--}}
+{{--                                        <input class="text-nicelabel" name="9998" value="999{{$w}}"--}}
+{{--                                               data-nicelabel='{"checked_text": "Chủ nhật", "unchecked_text": "Chủ nhật"}'--}}
+{{--                                               type="checkbox">--}}
+{{--                                    </div>--}}
+{{--                                </div>--}}
+{{--                            </div>--}}
+{{--                        </div>--}}
                     </div>
                     <div class="text-center">
                         <button type="submit" class="btn btn-origin">Tìm kiếm</button>
@@ -123,10 +123,10 @@
                             <div class="col-md-6 col-12">
                                 <nav class="pb-4 d-flex justify-content-center">
                                     <div class="nav nav-tabs" id="nav-tab" role="tablist">
-                                        <a class="nav-item nav-link  text-dark" id="nav-profile-tab" data-toggle="tab"
-                                           href="#nav-profile-{{$key}}" role="tab"
-                                           aria-controls="nav-profile-{{$key}}"
-                                           aria-selected="false">Lịch có thể dạy</a>
+{{--                                        <a class="nav-item nav-link  text-dark" id="nav-profile-tab" data-toggle="tab"--}}
+{{--                                           href="#nav-profile-{{$key}}" role="tab"--}}
+{{--                                           aria-controls="nav-profile-{{$key}}"--}}
+{{--                                           aria-selected="false">Lịch có thể dạy</a>--}}
                                         <a class="nav-item nav-link  text-dark" id="nav-contact-tab" data-toggle="tab"
                                            href="#nav-contact-{{$key}}" role="tab"
                                            aria-controls="nav-contact-{{$key}}"
@@ -134,11 +134,11 @@
                                     </div>
                                 </nav>
                                 <div class="tab-content " id="nav-tabContent">
-                                    <div class="tab-pane fade active show" id="nav-profile-{{$key}}" role="tabpanel"
-                                         aria-labelledby="nav-profile-tab">
-                                        {!!$data[$key]['table']!!}
-                                    </div>
-                                    <div class="tab-pane fade" id="nav-contact-{{$key}}" role="tabpanel"
+{{--                                    <div class="tab-pane fade active show" id="nav-profile-{{$key}}" role="tabpanel"--}}
+{{--                                         aria-labelledby="nav-profile-tab">--}}
+{{--                                        {!!$data[$key]['table']!!}--}}
+{{--                                    </div>--}}
+                                    <div class="tab-pane fade active show" id="nav-contact-{{$key}}" role="tabpanel"
                                          aria-labelledby="nav-contact-tab">
                                         {!! $data[$key]['video'] !!}
                                     </div>
