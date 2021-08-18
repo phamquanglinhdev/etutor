@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\apps\LogController;
+use App\Http\Controllers\apps\RoomController;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -45,3 +47,14 @@ Route::post('/teacher/{id}',[\App\Http\Controllers\TeacherFrontendController::cl
 Route::get('/teacher/{teacher}/delete/{id}',[\App\Http\Controllers\TeacherFrontendController::class,'delete',['teacher','id']])->where(['teacher','id'])->name('delete.comment');
 Route::get('page/{type}',[\App\Http\Controllers\FrontendPageController::class,'getData','type'])->where(['data'])->name('page');
 Route::any('/teachers/',[\App\Http\Controllers\Filter::class,'index'])->name('filter');
+
+Route::group(['prefix'=>'apps'], function () {
+    //Log
+    Route::get('/log',[LogController::class,'index'])->name("app.log.list");
+    Route::get('/log/create',[LogController::class,'create'])->name("app.log.create");
+    Route::post('/log/store',[LogController::class,'store'])->name("app.log.store");
+    //End Log
+    Route::get('/room',[RoomController::class,'index'])->name("app.room.list");
+    Route::get('/room/create',[RoomController::class,'create'])->name("app.room.create");
+    Route::post('/room/store',[RoomController::class,'store'])->name("app.room.store");
+});
