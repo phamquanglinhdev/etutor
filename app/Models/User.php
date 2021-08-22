@@ -51,4 +51,7 @@ class User extends Authenticatable
     public function prolife(){
         return $this->hasOne(Prolife::class,'user_id','id');
     }
+    public function student(){
+        return $this->hasOne(Student::class,'user_id','id');
+    }
 }

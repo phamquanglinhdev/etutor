@@ -15,10 +15,12 @@ class CreateRoomsTable extends Migration
     {
         Schema::create('rooms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger("staff_id");
             $table->string("name")->unique();
             $table->string("salary");
             $table->string("time");
             $table->string("document");
+            $table->longText("comment")->nullable();
             $table->timestamps();
         });
     }

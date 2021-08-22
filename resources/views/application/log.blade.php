@@ -10,7 +10,7 @@
             <div class="card mb-4">
                 <div class="card-header">
                     <i class="fas fa-table me-1"></i>
-                   Thống kê nhật ký toàn bộ
+                    Thống kê nhật ký toàn bộ
                 </div>
                 <div class="card-body">
                     <table id="datatablesSimple">
@@ -27,15 +27,17 @@
                         </thead>
                         <tbody>
                         @foreach($logs as $log)
-                            <tr>
-                                <td>{{$log->getUsers()->first()->name}}</td>
-                                <td>{{$log->updated_at}}</td>
-                                <td>{{$log->getRooms->first()->name}}</td>
-                                <td>{{$log->lesson_name}}</td>
-                                <td>{{$log->duration}}</td>
-                                <td>{{number_format($log->salary)}} đ</td>
-                                <td>{{$log->comment}}</td>
-                            </tr>
+                            @if(isset($log->lesson_name))
+                                <tr>
+                                    <td>{{$log->getUsers()->first()->name}}</td>
+                                    <td>{{$log->updated_at}}</td>
+                                    <td>{{$log->getRooms()->first()->name}}</td>
+                                    <td>{{$log->lesson_name}}</td>
+                                    <td>{{$log->duration}}</td>
+                                    <td>{{number_format($log->salary)}} đ</td>
+                                    <td>{{$log->comment}}</td>
+                                </tr>
+                            @endif
                         @endforeach
                         </tbody>
                     </table>
