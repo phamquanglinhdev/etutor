@@ -40,7 +40,7 @@
                 <div class="d-flex flex-wrap align-items-center">
                     <div class=" col-md-4 p-1 mt-2 text-center text-lg-left">
                         <a href="{{route('index')}}">
-                            <img src="{{asset('img/logo.png')}}" class="w-50">
+                            <img src="{{asset('img/logo.png')}}" class="w-100">
                         </a>
                     </div>
                     <div class="col-md-4 mt-2">
@@ -134,7 +134,7 @@
         <div class="container">
             <div class="row">
                 <div class="col-sm-12 col-md-6">
-                    <h6>Đăng ký nhận thông tin mới nhất về BizEnglish</h6>
+                    <h6>Đăng ký nhận thông tin mới nhất về E-Tutor</h6>
                     <form action="#" method="post">
                         @csrf
                         <div class="input-group mb-3 py-3 pr-5">
@@ -148,7 +148,7 @@
                         </div>
                     </form>
                     <div class="">
-                        <h6>CÔNG TY TNHH BIZ ENGLISH</h6>
+                        <h6>CÔNG TY TNHH E TUTOR</h6>
                         <div><i class="fas fa-map-marked"></i> Trụ sở: Số 9, ngõ 908/36 Kim Giang, thành phố Hà Nội.
                         </div>
                         <div><i class="fas fa-building"></i>
@@ -163,7 +163,7 @@
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Thông tin BizEnglish</h6>
+                    <h6>Thông tin E-Tutor</h6>
                     <ul class="footer-links">
                         <li><a href="{{route('page',['type'=>'how_learn'])}}#study-regester">Cách thức học</a></li>
                         <li><a href="{{route('page',['type'=>'faq'])}}">Câu hỏi thường gặp</a></li>
@@ -176,7 +176,7 @@
                 </div>
 
                 <div class="col-xs-6 col-md-3">
-                    <h6>Kết nối với BizEnglish</h6>
+                    <h6>Kết nối với E-Tutor</h6>
                     <div class="fb-page" data-href="https://www.facebook.com/bizenglishforsuccess/" data-tabs=""
                          data-width="" data-height="" data-small-header="true" data-adapt-container-width="false"
                          data-hide-cover="false" data-show-facepile="true">
@@ -196,7 +196,7 @@
             <div class="row">
                 <div class="col-md-8 col-sm-6 col-xs-12">
                     <p class="copyright-text">Copyright &copy; 2021 All Rights Reserved by
-                        <a href="#">BizEnglish</a>.
+                        <a href="#">E-Tutor</a>.
                     </p>
                 </div>
 

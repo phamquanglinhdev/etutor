@@ -11,16 +11,11 @@
         {{--        </ol>--}}
         <div class="carousel-inner">
             <div class="carousel-item active">
+                <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
                 <img class="d-block w-100"
                      src="{{asset('uploads/banner-1.jpg')}}"
                      alt="First slide">
-                <div class=" carousel-caption zoom-loop pt-5">
-                    <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
-                        <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
-                            <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
-                        </div>
-                    </a>
-                </div>
+                </a>
             </div>
             {{--            <div class="carousel-item">--}}
             {{--                <img class="d-block w-100"--}}
@@ -55,7 +50,7 @@
     </style>
     <div class="container">
         <div class="row">
-            <div class="col-12 pt-5 h2 text-center"><span class="text-origin text-uppercase">Biz </span>English</div>
+            <div class="col-12 pt-5 h2 text-center"><span class="text-origin text-uppercase">E-</span>Tutor</div>
             <div class="col-12 p-2 h4 text-center">Chuyên đào tạo tiếng Anh trực tuyến cho người đi làm</div>
             <div class="col-md-4 col-12 text-center">
                 <div class="p-3">
@@ -87,7 +82,7 @@
     </div>
     <div class="bg-dark text-white">
         <div class="container">
-            <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
+            <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI E-TUTOR?</div>
 {{--            <div class="main-couse-img text-center">--}}
 {{--                <img src="{{asset("img/course-bg.png")}}" class="w-100"/>--}}
 {{--            </div>--}}
