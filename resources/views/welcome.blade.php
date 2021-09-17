@@ -289,38 +289,38 @@
                     @endforeach
                 </div>
             @endif
-            @if(backpack_auth()->check())
-                <div class="p-1 rounded mt-2">
-                    <div class="">
-                        <div class="h3 text-white mb-2">Đánh giá của bạn</div>
-                        <form class="rating bg-light rounded p-5" action="{{route('save.comment',['id'=>'999999'])}}"
-                              method="post">
-                            @csrf
-                            <input type="hidden" value="999999" name="teacher_id">
-                            <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
-                            <input type="radio" id="star5" name="rate" value="5"/>
-                            <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
-                            <input type="radio" id="star4" name="rate" value="4"/>
-                            <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
-                            <input type="radio" id="star3" name="rate" value="3"/>
-                            <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
-                            <input type="radio" id="star2" name="rate" value="2"/>
-                            <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
-                            <input type="radio" id="star1" name="rate" value="1"/>
-                            <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
-                            <div class="mt-2">
-                            <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn"
-                                      required></textarea>
-                            </div>
-                            <div class="text-right pt-2">
-                                <button class="btn btn-origin pointed" type="submit">Gửi</button>
-                            </div>
-                        </form>
-                    </div>
-                </div>
-            @else
-                <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá</div>
-            @endif
+{{--            @if(backpack_auth()->check())--}}
+{{--                <div class="p-1 rounded mt-2">--}}
+{{--                    <div class="">--}}
+{{--                        <div class="h3 text-white mb-2">Đánh giá của bạn</div>--}}
+{{--                        <form class="rating bg-light rounded p-2" action="{{route('save.comment',['id'=>'999999'])}}"--}}
+{{--                              method="post">--}}
+{{--                            @csrf--}}
+{{--                            <input type="hidden" value="999999" name="teacher_id">--}}
+{{--                            <input type="hidden" value="{{backpack_user()->id}}" name="user_id">--}}
+{{--                            <input type="radio" id="star5" name="rate" value="5"/>--}}
+{{--                            <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>--}}
+{{--                            <input type="radio" id="star4" name="rate" value="4"/>--}}
+{{--                            <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>--}}
+{{--                            <input type="radio" id="star3" name="rate" value="3"/>--}}
+{{--                            <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>--}}
+{{--                            <input type="radio" id="star2" name="rate" value="2"/>--}}
+{{--                            <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>--}}
+{{--                            <input type="radio" id="star1" name="rate" value="1"/>--}}
+{{--                            <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>--}}
+{{--                            <div class="mt-2">--}}
+{{--                            <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn"--}}
+{{--                                      required></textarea>--}}
+{{--                            </div>--}}
+{{--                            <div class="text-right pt-2">--}}
+{{--                                <button class="btn btn-origin pointed" type="submit">Gửi</button>--}}
+{{--                            </div>--}}
+{{--                        </form>--}}
+{{--                    </div>--}}
+{{--                </div>--}}
+{{--            @else--}}
+{{--                <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá</div>--}}
+{{--            @endif--}}
         </div>
     </div>
 {{--    <div class="container-fluid bg-dark text-white p-5 mb-5">--}}

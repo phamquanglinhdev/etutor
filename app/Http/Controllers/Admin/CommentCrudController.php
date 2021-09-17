@@ -29,8 +29,8 @@ class CommentCrudController extends CrudController
         CRUD::setModel(\App\Models\Comment::class);
         CRUD::setRoute(config('backpack.base.route_prefix') . '/comment');
         CRUD::setEntityNameStrings('Đánh giá', 'Những đánh giá');
-        $this->crud->denyAccess('create');
-        $this->crud->denyAccess('update');
+//        $this->crud->denyAccess('create');
+//        $this->crud->denyAccess('update');
     }
 
     /**
@@ -41,7 +41,7 @@ class CommentCrudController extends CrudController
      */
     protected function setupListOperation()
     {
-        if(backpack_user()->role==0){
+        if(backpack_user()->role==0 || backpack_user()->role == 2){
             $this->crud->addClause('where','teacher_id','=',999999);
         }else{
             $this->crud->addClause('where','teacher_id','=',backpack_user()->id);
@@ -67,14 +67,10 @@ class CommentCrudController extends CrudController
     protected function setupCreateOperation()
     {
         CRUD::setValidation(CommentRequest::class);
-
-        CRUD::field('id');
-        CRUD::field('teacher_id');
-        CRUD::field('user_id');
-        CRUD::field('content');
-        CRUD::field('rate');
-        CRUD::field('created_at');
-        CRUD::field('updated_at');
+        CRUD::field('teacher_id')->type("hidden")->default(999999);
+        CRUD::field('user_id')->default(backpack_user()->id)->type("hidden");
+        CRUD::field('content')->label("Nội dung");
+        CRUD::field('rate')->label("Sao đánh giá");
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:
