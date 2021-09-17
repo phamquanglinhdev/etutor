@@ -270,7 +270,7 @@
                 <div style="overflow-y: scroll;max-height: 500px">
                     @foreach($comments as $comment)
                         @if(isset($comment->users()->first()->name))
-                            <div class="media row m-0 px-3 bg-light mt-2 ">
+                            <div class="media row m-0 px-3 py-3 rounded bg-light mt-2 ">
                                 <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
                                     <img
                                         style="width: 120px;"
