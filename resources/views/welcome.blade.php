@@ -260,9 +260,9 @@
             </div>
         </div>
     </div>
-    <div class="container-fluid custom-back-ground-01">
+    <div class="container-fluid bg-dark">
         <div class="container pb-5">
-            <div class="p-5 h2 text-center">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
+            <div class="p-5 h2 text-center text-white">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
             @php
                 $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->get();
             @endphp
@@ -323,31 +323,32 @@
             @endif
         </div>
     </div>
-    <div class="container-fluid bg-dark text-white p-5 mb-5">
-        <div class="container py-5">
-            <div class="row m-0">
-                <div class="col-md-4 text-center">
-                    <div class="h3">Số giảng viên</div>
-                    <div class="h1">{{\App\Models\User::where('role','=',1)->count()}}+</div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="h3">Số học viên</div>
-                    <div class="h1">1250+</div>
-                </div>
-                <div class="col-md-4 text-center">
-                    <div class="h3">Khóa học</div>
-                    <div class="h1">{{\App\Models\Course::count()}}</div>
-                </div>
-            </div>
-        </div>
-        <div class="zoom-loop pb-5">
-            <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
-                <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
-                    <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
-                </div>
-            </a>
-        </div>
-    </div>
+{{--    <div class="container-fluid bg-dark text-white p-5 mb-5">--}}
+{{--        <div class="container py-5">--}}
+{{--            <div class="row m-0">--}}
+{{--                <div class="col-md-4 text-center">--}}
+{{--                    <div class="h3">Số giảng viên</div>--}}
+{{--                    <div class="h1">{{\App\Models\User::where('role','=',1)->count()}}+</div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4 text-center">--}}
+{{--                    <div class="h3">Số học viên</div>--}}
+{{--                    <div class="h1">1250+</div>--}}
+{{--                </div>--}}
+{{--                <div class="col-md-4 text-center">--}}
+{{--                    <div class="h3">Khóa học</div>--}}
+{{--                    <div class="h1">{{\App\Models\Course::count()}}</div>--}}
+{{--                </div>--}}
+{{--            </div>--}}
+{{--        </div>--}}
+{{--        --}}
+{{--    </div>--}}
+{{--    <div class="zoom-loop pb-5 bg-dark">--}}
+{{--        <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">--}}
+{{--            <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">--}}
+{{--                <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí--}}
+{{--            </div>--}}
+{{--        </a>--}}
+{{--    </div>--}}
     <div class="container mb-5">
         <div class="row m-0 align-items-center contact">
             <div class="col-md-6 col-12 p-5">
