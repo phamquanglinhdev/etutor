@@ -6,11 +6,19 @@
 
 @endphp
 @section('content')
+    <link href="{{asset('asset/css/index.css')}}" rel="stylesheet">
     @if(isset($tags))
         @php
             $title = "Các khoá học";
         @endphp
         <div class="container pt-3">
+            <div class="zoom-loop pb-5">
+                <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                    <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                        <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
+                    </div>
+                </a>
+            </div>
             @foreach($tags as $tag)
                 <div class="h3 text-origin">{{$tag->name}}</div>
                 @php
@@ -39,6 +47,13 @@
                     @endforeach
                 </div>
             @endforeach
+            <div class="zoom-loop pb-5">
+                <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                    <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                        <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
+                    </div>
+                </a>
+            </div>
         </div>
     @else
         <div class="text-origin text-center p-5 h1 container">

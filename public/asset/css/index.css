@@ -26,16 +26,21 @@
     background: url(https://www.xmple.com/wallpaper/blue-white-gradient-linear-1920x1080-c2-fffaf0-87ceeb-a-30-f-14.svg);
     background-attachment: fixed;
 }
-.zoom-loop  {
-    animation: zoom-loops 3s ease infinite;
-    cursor: pointer;
+.custom-back-ground-03 {
+    background-size: contain;
+    background: url(http://www.academialeb.com/wp-content/uploads/2014/07/section-BG-dark.jpg);
+    background-attachment: fixed;
 }
+/*.zoom-loop  {*/
+/*    animation: zoom-loops 3s ease infinite;*/
+/*    cursor: pointer;*/
+/*}*/
 
-@keyframes zoom-loops {
-    from {
-        transform: scale(1)
-    }
-    to {
-        transform: scale(1.05)
-    }
-}
+/*@keyframes zoom-loops {*/
+/*    from {*/
+/*        transform: scale(1)*/
+/*    }*/
+/*    to {*/
+/*        transform: scale(1.05)*/
+/*    }*/
+/*}*/

@@ -89,10 +89,9 @@
             <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
             <div class="main-couse-img text-center">
                 <img src="{{asset("img/course-bg.png")}}" class="d-none d-lg-block w-100"/>
-                <img src="{{asset("img/couse_bg_mobile.png")}}" class="w-100 d-block d-lg-none"/>
             </div>
-            <div class=" p-2 py-5 h2 text-center">
-                <button class="btn btn-origin"><a class="link-style-none" href="{{route("tag")}}">Xem chi tiết các khoá
+            <div class=" p-2 pb-5 pt-2 h2 text-center">
+                <button class="btn btn-origin"><a class="link-style-none text-white" href="{{route("tag")}}">Xem chi tiết các khoá
                         học</a></button>
             </div>
             {{--            <div class="row">--}}
@@ -160,16 +159,10 @@
 
 
         </div>
-        <div class="zoom-loop pb-5">
-            <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
-                <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
-                    <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
-                </div>
-            </a>
-        </div>
+
         <div class="container-fluid text-dark custom-back-ground-01 pb-5">
             <div class="container">
-                <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
+                <div class=" p-2 py-5 h2 text-center">ĐÀO TẠO TIẾNG ANH CHO DOANH NGHIỆP</div>
                 <div class="row align-items-center bg-white">
                     <div class="col-md-6 p-2 rounded">
                         <div class="p-3 bg-white">
