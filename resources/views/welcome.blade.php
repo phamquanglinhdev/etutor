@@ -88,7 +88,7 @@
         <div class="container">
             <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
             <div class="main-couse-img text-center">
-                <img src="{{asset("img/course-bg.png")}}" class="d-none d-lg-block w-100"/>
+                <img src="{{asset("img/course-bg.png")}}" class="w-100"/>
             </div>
             <div class=" p-2 pb-5 pt-2 h2 text-center">
                 <button class="btn btn-origin"><a class="link-style-none text-white" href="{{route("tag")}}">Xem chi tiết các khoá
