@@ -88,10 +88,24 @@
     <div class="bg-dark text-white">
         <div class="container">
             <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
-            <div class="main-couse-img text-center">
-                <img src="{{asset("img/course-bg.png")}}" class="w-100"/>
+{{--            <div class="main-couse-img text-center">--}}
+{{--                <img src="{{asset("img/course-bg.png")}}" class="w-100"/>--}}
+{{--            </div>--}}
+            <div class="row">
+                <div class="col-md-3 col-sm-6 col-12">
+                    <img src="{{asset("img/pad_1.png")}}" class="w-100">
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <img src="{{asset("img/pad_2.png")}}" class="w-100">
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <img src="{{asset("img/pad_3.png")}}" class="w-100">
+                </div>
+                <div class="col-md-3 col-sm-6 col-12">
+                    <img src="{{asset("img/pad_4.png")}}" class="w-100">
+                </div>
             </div>
-            <div class=" p-2 pb-5 pt-2 h2 text-center">
+            <div class=" p-2 pb-4 pt-3 h2 text-center">
                 <button class="btn btn-origin"><a class="link-style-none text-white" href="{{route("tag")}}">Xem chi tiết các khoá
                         học</a></button>
             </div>
@@ -161,33 +175,34 @@
 
         </div>
 
-        <div class="container-fluid text-dark custom-back-ground-01 pb-5">
+        <div class="container-fluid text-white bg-dark pb-5">
             <div class="container">
                 <div class=" p-2 py-5 h2 text-center">ĐÀO TẠO TIẾNG ANH CHO DOANH NGHIỆP</div>
-                <div class="row align-items-center bg-white">
-                    <div class="col-md-6 p-2 rounded">
-                        <div class="p-3 bg-white">
-                            <p class="h5">BIZ ENGLISH đào tạo tiếng Anh
-                                Online cho nhân viên các doanh nghiệp
-                                theo yêu cầu. </p>
+                <div class="row align-items-center border">
+                    <div class="col-md-4 p-2 rounded ">
+                        <div class="p-3 ">
+                            <p class="h5">BIZ ENGLISH đào tạo tiếng Anh Online cho nhân viên các doanh nghiệp theo yêu cầu. </p>
                             <p>
-                                - Nâng cao hiệu quả học tập.
+                                -	Chương trình học được thiết kế riêng theo yêu cầu của từng doanh nghiệp.
                             </p>
                             <p>
-                                - Tiết kiệm chi phí lên tới 50% – 70%.
+                                -	Nâng cao hiệu quả học tập
                             </p>
-                            <button class="btn btn-origin w-100"><a class="text-white link-style-none" href="{{route("page","for_bussiness")}}">Xem chi tiết</a></button>
+                            <p>
+                                -	Tiết kiệm chi phí lên tới 50% – 70%.
+                            </p>
+                            <button class="btn btn-origin border"><a class="text-white link-style-none" href="{{route("page","for_bussiness")}}">Xem chi tiết</a></button>
                         </div>
                     </div>
-                    <div class="col-md-6 p-2">
+                    <div class="col-md-8 p-2">
                         <div class="">
-                            <img src="https://dichthuattienganh.org/wp-content/uploads/2018/12/bien-dich-tieng-campuchia.jpg" class="w-100">
+                            <img src="{{asset("img/bussiness.png")}}" class="w-100">
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-        <div class="container-fluid custom-back-ground-02">
+        <div class="container-fluid bg-white">
             <div class="container" id="giaovien">
                 <div class="row">
                     <div class="col-12 pt-5 text-uppercase text-origin h2 text-center pb-2">GIÁO VIÊN CỦA CHÚNG TÔI
