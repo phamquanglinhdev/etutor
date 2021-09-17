@@ -44,6 +44,7 @@
     </div>
 @endsection
 @section('content')
+    <script src="https://unpkg.com/scrollreveal"></script>
     <link href="{{asset('asset/css/index.css')}}" rel="stylesheet">
     <style>
         .contact {
@@ -366,5 +367,8 @@
             </div>
         </div>
     </div>
+    <script>
+        ScrollReveal().reveal('div', {delay: 500});
+    </script>
 @endsection
 
