@@ -33,6 +33,10 @@ class FrontendPageController extends Controller
                 $data=$page->be_client;
                 $title='Trở thành đối tác của BizEnglish';
                 break;
+            case 'for_bussiness':
+                $data=$page->for_bussiness;
+                $title='Tiếng Anh cho doanh nghiệp';
+                break;
         }
         return $this->render($data,$title);
     }

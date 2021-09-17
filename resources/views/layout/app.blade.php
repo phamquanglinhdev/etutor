@@ -70,24 +70,27 @@
                     <li class="nav-item active">
                         <a class="nav-link" href="{{route('index')}}">Trang chủ</a>
                     </li>
-                    <li class="nav-item dropdown">
-                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com"
-                           id="navbarDropdownMenuLink"
-                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                            Khóa học
-                        </a>
-                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học
-                                    Giao Tiếp Online 1-1</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết
-                                    Online 1-1</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học
-                                    Theo Yêu Cầu</a></li>
-                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học
-                                    Video</a></li>
-
-                        </ul>
+                    <li class="nav-item active">
+                        <a class="nav-link" href="{{route('tag')}}">Các khoá học</a>
                     </li>
+{{--                    <li class="nav-item dropdown">--}}
+{{--                        <a class="nav-link  text-white dropdown-toggle" href="http://example.com"--}}
+{{--                           id="navbarDropdownMenuLink"--}}
+{{--                           data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">--}}
+{{--                            Khóa học--}}
+{{--                        </a>--}}
+{{--                        <ul class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">--}}
+{{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-giao-tiep-online-1-1.html')}}">Học--}}
+{{--                                    Giao Tiếp Online 1-1</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="{{route('tag','hoc-viet-online-1-1.html')}}">Học Viết--}}
+{{--                                    Online 1-1</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="{{route('tag','khoa-hoc-theo-yeu-cau.html')}}">Khóa Học--}}
+{{--                                    Theo Yêu Cầu</a></li>--}}
+{{--                            <li><a class="dropdown-item" href="{{route('tag','cac-khoa-hoc-video.html')}}">Các Khóa Học--}}
+{{--                                    Video</a></li>--}}
+
+{{--                        </ul>--}}
+{{--                    </li>--}}
                     <li class="nav-item dropdown">
                         <a class="nav-link text-white dropdown-toggle" href="http://example.com"
                            id="navbarDropdownMenuLink"

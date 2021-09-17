@@ -1,5 +1,8 @@
 @extends('layout.app')
 @section('slider')
+    @php
+        $config = \App\Models\Cofig::first();
+    @endphp
     <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-ride="carousel">
         {{--        <ol class="carousel-indicators">--}}
         {{--            <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>--}}
@@ -11,6 +14,13 @@
                 <img class="d-block w-100"
                      src="{{asset('uploads/banner-1.jpg')}}"
                      alt="First slide">
+                <div class=" carousel-caption zoom-loop pt-5">
+                    <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                        <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                            <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
+                        </div>
+                    </a>
+                </div>
             </div>
             {{--            <div class="carousel-item">--}}
             {{--                <img class="d-block w-100"--}}
@@ -76,174 +86,233 @@
     </div>
     <div class="bg-dark text-white">
         <div class="container">
-            <div class="row">
-                <div class="col-12 p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
-                <div class="col-md-3 col-sm-6 col-12 tran-shadow d-flex flex-column justify-content-between">
-                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}"
-                       class="link-style-none text-white">
-                        <div class="p-3">
-                            <div>
-                                <img src="{{asset('uploads/learning-1.png')}}" class="pb-2 w-100">
-                            </div>
-                            <div class=" text-origin"><b>HỌC GIAO TIẾP
-                                    ONLINE 1-1</b></div>
-                            <p>Học giao tiếp Online 1 - 1 với giáo viên Việt Nam – gv Philippine – gv Bản Ngữ.</p>
-                        </div>
-                    </a>
-                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}" class="btn btn-origin show">Xem
-                        chi tiết</a>
+            <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
+            <div class="main-couse-img text-center">
+                <img src="{{asset("img/course-bg.png")}}" class="d-none d-lg-block w-100"/>
+                <img src="{{asset("img/couse_bg_mobile.png")}}" class="w-100 d-block d-lg-none"/>
+            </div>
+            <div class=" p-2 py-5 h2 text-center">
+                <button class="btn btn-origin"><a class="link-style-none" href="{{route("tag")}}">Xem chi tiết các khoá
+                        học</a></button>
+            </div>
+            {{--            <div class="row">--}}
+
+            {{--                <div class="col-md-3 col-sm-6 col-12 tran-shadow d-flex flex-column justify-content-between">--}}
+            {{--                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}"--}}
+            {{--                       class="link-style-none text-white">--}}
+            {{--                        <div class="p-3">--}}
+            {{--                            <div>--}}
+            {{--                                <img src="{{asset('uploads/learning-1.png')}}" class="pb-2 w-100">--}}
+            {{--                            </div>--}}
+            {{--                            <div class=" text-origin"><b>HỌC GIAO TIẾP--}}
+            {{--                                    ONLINE 1-1</b></div>--}}
+            {{--                            <p>Học giao tiếp Online 1 - 1 với giáo viên Việt Nam – gv Philippine – gv Bản Ngữ.</p>--}}
+            {{--                        </div>--}}
+            {{--                    </a>--}}
+            {{--                    <a href="{{route('tag',['slug'=>'hoc-giao-tiep-online-1-1.html'])}}" class="btn btn-origin show">Xem--}}
+            {{--                        chi tiết</a>--}}
+            {{--                </div>--}}
+            {{--                <div class="col-md-3 col-sm-6 col-12 tran-shadow d-flex flex-column justify-content-between">--}}
+            {{--                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}"--}}
+            {{--                       class="link-style-none text-white">--}}
+            {{--                        <div class="p-3">--}}
+            {{--                            <div>--}}
+            {{--                                <img src="{{asset('uploads/learning-2.png')}}" class="pb-2 w-100">--}}
+            {{--                            </div>--}}
+            {{--                            <div class=" text-origin"><b>--}}
+            {{--                                    HỌC VIẾT ONLINE 1 - 1--}}
+            {{--                                </b></div>--}}
+            {{--                            <p>Học viết tiếng Anh từ cơ bản tới nâng cao, các dạng Email và báo cáo trong công việc.</p>--}}
+            {{--                        </div>--}}
+            {{--                    </a>--}}
+            {{--                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}" class="btn btn-origin show">Xem chi--}}
+            {{--                        tiết</a>--}}
+            {{--                </div>--}}
+            {{--                <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">--}}
+            {{--                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}"--}}
+            {{--                       class="link-style-none text-white">--}}
+            {{--                        <div class="p-3">--}}
+            {{--                            <div>--}}
+            {{--                                <img src="{{asset('uploads/learning-3.png')}}" class="pb-2 w-100">--}}
+            {{--                            </div>--}}
+            {{--                            <div class=" text-origin"><b>KHÓA HỌC THEO YÊU CẦU</b></div>--}}
+            {{--                            <p>Học ngữ pháp, phát âm, luyện thi IELTS, TOEIC và tiếng Anh chuyên ngành theo yêu cầu.</p>--}}
+            {{--                        </div>--}}
+            {{--                    </a>--}}
+            {{--                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}" class="btn btn-origin show">Xem--}}
+            {{--                        chi tiết</a>--}}
+            {{--                </div>--}}
+            {{--                <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">--}}
+            {{--                    <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}"--}}
+            {{--                       class="link-style-none text-white">--}}
+            {{--                        <div class="p-3">--}}
+            {{--                            <div>--}}
+            {{--                                <img src="{{asset('uploads/learning-4.png')}}" class="pb-2 w-100">--}}
+            {{--                            </div>--}}
+            {{--                            <div class=" text-origin"><b>CÁC KHÓA HỌC VIDEO</b></div>--}}
+            {{--                            <p>Học giao tiếp – ngữ pháp – viết – luyện thi IELTS và TOEIC qua các video.</p>--}}
+            {{--                        </div>--}}
+            {{--                    </a>--}}
+            {{--                    <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}" class="btn btn-origin show">Xem chi--}}
+            {{--                        tiết</a>--}}
+            {{--                </div>--}}
+            {{--            </div>--}}
+
+
+        </div>
+        <div class="zoom-loop pb-5">
+            <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                    <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
                 </div>
-                <div class="col-md-3 col-sm-6 col-12 tran-shadow d-flex flex-column justify-content-between">
-                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}"
-                       class="link-style-none text-white">
-                        <div class="p-3">
-                            <div>
-                                <img src="{{asset('uploads/learning-2.png')}}" class="pb-2 w-100">
-                            </div>
-                            <div class=" text-origin"><b>
-                                    HỌC VIẾT ONLINE 1 - 1
-                                </b></div>
-                            <p>Học viết tiếng Anh từ cơ bản tới nâng cao, các dạng Email và báo cáo trong công việc.</p>
+            </a>
+        </div>
+        <div class="container-fluid text-dark custom-back-ground-01 pb-5">
+            <div class="container">
+                <div class=" p-2 py-5 h2 text-center">BẠN CÓ THỂ HỌC GÌ VỚI BIZ ENGLISH?</div>
+                <div class="row align-items-center bg-white">
+                    <div class="col-md-6 p-2 rounded">
+                        <div class="p-3 bg-white">
+                            <p class="h5">BIZ ENGLISH đào tạo tiếng Anh
+                                Online cho nhân viên các doanh nghiệp
+                                theo yêu cầu. </p>
+                            <p>
+                                - Nâng cao hiệu quả học tập.
+                            </p>
+                            <p>
+                                - Tiết kiệm chi phí lên tới 50% – 70%.
+                            </p>
+                            <button class="btn btn-origin w-100"><a class="text-white link-style-none" href="{{route("page","for_bussiness")}}">Xem chi tiết</a></button>
                         </div>
-                    </a>
-                    <a href="{{route('tag',['slug'=>'hoc-viet-online-1-1.html'])}}" class="btn btn-origin show">Xem chi
-                        tiết</a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">
-                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}"
-                       class="link-style-none text-white">
-                        <div class="p-3">
-                            <div>
-                                <img src="{{asset('uploads/learning-3.png')}}" class="pb-2 w-100">
-                            </div>
-                            <div class=" text-origin"><b>KHÓA HỌC THEO YÊU CẦU</b></div>
-                            <p>Học ngữ pháp, phát âm, luyện thi IELTS, TOEIC và tiếng Anh chuyên ngành theo yêu cầu.</p>
+                    </div>
+                    <div class="col-md-6 p-2">
+                        <div class="">
+                            <img src="https://dichthuattienganh.org/wp-content/uploads/2018/12/bien-dich-tieng-campuchia.jpg" class="w-100">
                         </div>
-                    </a>
-                    <a href="{{route('tag',['slug'=>'khoa-hoc-theo-yeu-cau.html'])}}" class="btn btn-origin show">Xem
-                        chi tiết</a>
-                </div>
-                <div class="col-md-3 col-sm-6 col-12 tran-shadow  d-flex flex-column justify-content-between">
-                    <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}"
-                       class="link-style-none text-white">
-                        <div class="p-3">
-                            <div>
-                                <img src="{{asset('uploads/learning-4.png')}}" class="pb-2 w-100">
-                            </div>
-                            <div class=" text-origin"><b>CÁC KHÓA HỌC VIDEO</b></div>
-                            <p>Học giao tiếp – ngữ pháp – viết – luyện thi IELTS và TOEIC qua các video.</p>
-                        </div>
-                    </a>
-                    <a href="{{route('tag',['slug'=>'cac-khoa-hoc-video.html'])}}" class="btn btn-origin show">Xem chi
-                        tiết</a>
+                    </div>
                 </div>
             </div>
-            <div class="row pt-5">
-                <div class="col-12 pt-5 text-uppercase h2 text-center">GIÁO VIÊN CỦA CHÚNG TÔI</div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 ">
-                    <div class="p-3 ">
-
-
-                        <img src="{{asset('uploads/teacher-vn.png')}}" class="pb-2 w-100">
-                        <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
-                        <p>Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc du học sinh tại Mỹ - Châu Âu.</p>
-
+        </div>
+        <div class="container-fluid custom-back-ground-02">
+            <div class="container" id="giaovien">
+                <div class="row">
+                    <div class="col-12 pt-5 text-uppercase text-origin h2 text-center pb-2">GIÁO VIÊN CỦA CHÚNG TÔI
                     </div>
-                </div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 ">
-                    <div class="p-3">
-
-                        <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">
-                        <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
-                        <p>Giáo viên Philippines nổi tiếng là những người chuyên dạy tiếng Anh cho học viên trên
-                            toàn thế giới.</p>
-
+                    <div class="col-md-6 col-12 text-center d-flex justify-content-between flex-column mb-lg-0 mb-5 ">
+                        <div class="p-3 shadow rounded">
+                            {{--                        <img src="{{asset('uploads/teacher-vn.png')}}" class="pb-2 w-100">--}}
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Việt Nam</b></p>
+                            <p class="text-dark">Giáo viên Việt Nam với chứng chỉ IELTS 6.5 – 8.0 hoặc
+                                du học sinh tại Mỹ - Châu Âu.
+                            </p>
+                            <div class="YTB-Video">
+                                {!!$config->fvideo!!}
+                            </div>
+                        </div>
                     </div>
-                </div>
-                <div class="col-md-4 col-12 text-center d-flex justify-content-between flex-column mb-5 ">
-                    <div class="p-3 ">
+                    <div class="col-md-6 col-12 text-center d-flex justify-content-between flex-column mb-lg-0 mb-5 ">
+                        <div class="p-3 shadow rounded">
 
-                        <img src="{{asset('uploads/teacher-bn.png')}}" class="pb-2 w-100">
-                        <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Bản Ngữ</b></p>
-                        <p>Giáo viên Mỹ - Châu Âu – Úc – Nam Phi là những nước tiếng Anh là ngôn ngữ chính.</p>
-
+                            {{--                        <img src="{{asset('uploads/teacher-pl.png')}}" class="pb-2 w-100">--}}
+                            <p class="mt-1 text-uppercase text-origin"><b>Giáo viên Philippines</b></p>
+                            <p class="text-dark">Giáo viên Philippines nổi tiếng là những người chuyên
+                                dạy tiếng Anh cho trẻ em trên toàn thế giới.
+                            </p>
+                            <div class="YTB-Video">
+                                {!!$config->svideo!!}
+                            </div>
+                        </div>
                     </div>
                 </div>
             </div>
-            <div class="row">
-                <div class="col-12 pt-5 text-uppercase h2 text-center">Tìm kiếm giáo viên</div>
-                <div class="col-12 pt-5 text-uppercase text-center">Bạn có thể tìm kiếm giáo viên phù hợp nhất với bạn
-                    về khóa học, mức chi phí và thời gian học.
+            <div class="text-origin">
+                <div class="container">
+                    <div class="row">
+                        <div class="col-12 pt-5 text-uppercase h2 text-center">Tìm kiếm giáo viên</div>
+                        <div class="col-12 h5 pb-2 text-center text-dark">Bạn có thể tìm kiếm giáo viên phù hợp nhất với
+                            bạn
+                            về khóa học, mức chi phí và thời gian học.
+                        </div>
+                        <div class="pb-5 d-flex w-100 align-items-center justify-content-center">
+                            <button class="btn btn-origin shadow">
+                                <a class="link-style-none text-white" href="{{route('filter')}}">
+                                    <i class="fas fa-search"></i> Tìm kiếm ngay</a>
+                            </button>
+                        </div>
+                    </div>
                 </div>
-                <div class="p-5 d-flex w-100 align-items-center justify-content-center">
-                    <button class="btn btn-origin "><a class="link-style-none text-white"
-                                                       href="{{route('filter')}}"><i
-                                class="fas fa-search"></i> Tìm kiếm ngay</a>
-                    </button>
+                <div class="zoom-loop pb-5">
+                    <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                        <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                            <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
+                        </div>
+                    </a>
                 </div>
             </div>
         </div>
     </div>
-    <div class="container pb-5">
-        <div class="p-5 h2 text-center">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
-        @php
-            $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->get();
-        @endphp
-        @if(isset($comments))
-            <div style="overflow-y: scroll;max-height: 500px">
-                @foreach($comments as $comment)
-                    @if(isset($comment->users()->first()->name))
-                        <div class="media row m-0 px-3 bg-light mt-2 ">
-                            <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
-                                <img
-                                    style="width: 120px;"
-                                    src="{{$comment->users()->first()->avatar}}"
-                                    alt="Generic placeholder image ">
+    <div class="container-fluid custom-back-ground-01">
+        <div class="container pb-5">
+            <div class="p-5 h2 text-center">HỌC VIÊN CỦA CHÚNG TÔI NÓI GÌ ?</div>
+            @php
+                $comments = \App\Models\Comment::where('teacher_id','=','999999')->orderBy('updated_at','DESC')->get();
+            @endphp
+            @if(isset($comments))
+                <div style="overflow-y: scroll;max-height: 500px">
+                    @foreach($comments as $comment)
+                        @if(isset($comment->users()->first()->name))
+                            <div class="media row m-0 px-3 bg-light mt-2 ">
+                                <div class="col-sm-2 col-12" style="height: 80px; overflow: hidden;align-self: center">
+                                    <img
+                                        style="width: 120px;"
+                                        src="{{$comment->users()->first()->avatar}}"
+                                        alt="Generic placeholder image ">
+                                </div>
+                                <div class="media-body col-sm-10 col-12 ">
+                                    <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
+                                    <div class="font-italic h6">{{$comment->content}}</div>
+                                    @for($i=1;$i<=$comment->rate;$i++)
+                                        <i class="fas fa-star text-warning mr-1"></i>
+                                    @endfor
+                                </div>
                             </div>
-                            <div class="media-body col-sm-10 col-12 ">
-                                <div class="mt-0 h5">{{$comment->users()->first()->name}}</div>
-                                <div class="font-italic h6">{{$comment->content}}</div>
-                                @for($i=1;$i<=$comment->rate;$i++)
-                                    <i class="fas fa-star text-warning mr-1"></i>
-                                @endfor
-                            </div>
-                        </div>
-                    @endif
-                @endforeach
-            </div>
-        @endif
-        @if(backpack_auth()->check())
-            <div class="bg-origin p-1 rounded mt-2">
-                <div class="p-5">
-                    <div class="h3 text-white mb-2">Đánh giá của bạn</div>
-                    <form class="rating bg-light rounded p-5" action="{{route('save.comment',['id'=>'999999'])}}"
-                          method="post">
-                        @csrf
-                        <input type="hidden" value="999999" name="teacher_id">
-                        <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
-                        <input type="radio" id="star5" name="rate" value="5"/>
-                        <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
-                        <input type="radio" id="star4" name="rate" value="4"/>
-                        <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
-                        <input type="radio" id="star3" name="rate" value="3"/>
-                        <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
-                        <input type="radio" id="star2" name="rate" value="2"/>
-                        <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
-                        <input type="radio" id="star1" name="rate" value="1"/>
-                        <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
-                        <div class="mt-2">
+                        @endif
+                    @endforeach
+                </div>
+            @endif
+            @if(backpack_auth()->check())
+                <div class="p-1 rounded mt-2">
+                    <div class="">
+                        <div class="h3 text-white mb-2">Đánh giá của bạn</div>
+                        <form class="rating bg-light rounded p-5" action="{{route('save.comment',['id'=>'999999'])}}"
+                              method="post">
+                            @csrf
+                            <input type="hidden" value="999999" name="teacher_id">
+                            <input type="hidden" value="{{backpack_user()->id}}" name="user_id">
+                            <input type="radio" id="star5" name="rate" value="5"/>
+                            <label for="star5" title="text">5 <i class="fas fa-star text-warning mr-2"></i></label>
+                            <input type="radio" id="star4" name="rate" value="4"/>
+                            <label for="star4" title="text">4 <i class="fas fa-star text-warning mr-2"></i></label>
+                            <input type="radio" id="star3" name="rate" value="3"/>
+                            <label for="star3" title="text">3 <i class="fas fa-star text-warning mr-2"></i></label>
+                            <input type="radio" id="star2" name="rate" value="2"/>
+                            <label for="star2" title="text">2 <i class="fas fa-star text-warning mr-2"></i></label>
+                            <input type="radio" id="star1" name="rate" value="1"/>
+                            <label for="star1" title="text">1 <i class="fas fa-star text-warning mr-2"></i></label>
+                            <div class="mt-2">
                             <textarea class="form-control" name="contents" placeholder="Đánh giá của bạn"
                                       required></textarea>
-                        </div>
-                        <div class="text-right pt-2">
-                            <button class="btn btn-origin pointed" type="submit">Gửi</button>
-                        </div>
-                    </form>
+                            </div>
+                            <div class="text-right pt-2">
+                                <button class="btn btn-origin pointed" type="submit">Gửi</button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
-            </div>
-        @else
-            <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá</div>
-        @endif
+            @else
+                <div class="text-center text-origin">*Bạn cần đăng nhập để đánh giá</div>
+            @endif
+        </div>
     </div>
     <div class="container-fluid bg-dark text-white p-5 mb-5">
         <div class="container py-5">
@@ -261,6 +330,13 @@
                     <div class="h1">{{\App\Models\Course::count()}}</div>
                 </div>
             </div>
+        </div>
+        <div class="zoom-loop pb-5">
+            <a class="link-style-none " href="https://docs.google.com/forms/d/1hAzf5BeeEF6ou6PTAcQHMOf1mmuo63MDlvgqGEBbC4Y/viewform?edit_requested=true">
+                <div class="btn-danger w-50 m-auto py-3 rounded font-weight-bold text-white text-center">
+                    <i class="fas fa-hand-point-right"></i> Đăng ký tư vấn và học thử miễn phí
+                </div>
+            </a>
         </div>
     </div>
     <div class="container mb-5">

@@ -12,4 +12,30 @@
     cursor: pointer;
     transition: 0.5s;
 }
+.YTB-Video iframe{
+    width: 100%!important;
+    height: 300px!important;
+}
+.custom-back-ground-02 {
+    background-size: contain;
+    background: url(http://images6.fanpop.com/image/photos/36100000/Christmas-image-christmas-36118465-1920-1200.jpg);
+    background-attachment: fixed;
+}
+.custom-back-ground-01 {
+    background-size: contain;
+    background: url(https://www.xmple.com/wallpaper/blue-white-gradient-linear-1920x1080-c2-fffaf0-87ceeb-a-30-f-14.svg);
+    background-attachment: fixed;
+}
+.zoom-loop  {
+    animation: zoom-loops 3s ease infinite;
+    cursor: pointer;
+}
 
+@keyframes zoom-loops {
+    from {
+        transform: scale(1)
+    }
+    to {
+        transform: scale(1.05)
+    }
+}

@@ -44,6 +44,8 @@ class CofigCrudController extends CrudController
         CRUD::addColumn(['name' => 'host_phone', 'label'=>'HotLine']);
         CRUD::addColumn(['name' => 'description', 'label'=>'Giới thiệu ngắn (dùng để SEO)']);
         CRUD::addColumn(['name' => 'keyword', 'label'=>'Từ khóa của trang (dùng để SEO,cách nhau bằng dấu phảy)']);
+        CRUD::addColumn(['name' => 'fvideo', 'label'=>'Mã nhúng video 1']);
+        CRUD::addColumn(['name' => 'svideo', 'label'=>'Mã nhúng video 2']);
         /**
          * Columns can be defined using the fluent syntax or array syntax:
          * - CRUD::column('price')->type('number');
@@ -65,6 +67,8 @@ class CofigCrudController extends CrudController
         CRUD::addField(['name' => 'host_phone', 'label'=>'HotLine']);
         CRUD::addField(['name' => 'description', 'label'=>'Giới thiệu ngắn (dùng để SEO)','type'=>'textarea']);
         CRUD::addField(['name' => 'keyword', 'label'=>'Từ khóa của trang (dùng để SEO,cách nhau bằng dấu phảy)','type'=>'text']);
+        CRUD::addField(['name' => 'fvideo', 'label'=>'Mã nhúng video 1']);
+        CRUD::addField(['name' => 'svideo', 'label'=>'Mã nhúng video 2']);
 
         /**
          * Fields can be defined using the fluent syntax or array syntax:

@@ -32,9 +32,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 })->name('index');
-Route::get('/tag/{slug}',[TagFrontendController::class,'index','id'])->where(
-    ['slug']
-)->name('tag');
+Route::get('/tag/',[TagFrontendController::class,'index'])->name('tag');
 Route::get('/course/{slug}',[CourseFrontendController::class,'index','id'])->where(
     ['slug']
 )->name('course');
