@@ -176,7 +176,7 @@
                 <div class="row align-items-center border">
                     <div class="col-md-4 p-2 rounded ">
                         <div class="p-3 ">
-                            <p class="h5">BIZ ENGLISH đào tạo tiếng Anh Online cho nhân viên các doanh nghiệp theo yêu cầu. </p>
+                            <p class="h5">E Tutor đào tạo tiếng Anh Online cho nhân viên các doanh nghiệp theo yêu cầu. </p>
                             <p>
                                 -	Chương trình học được thiết kế riêng theo yêu cầu của từng doanh nghiệp.
                             </p>
